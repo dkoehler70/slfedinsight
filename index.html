@@ -3,16 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLFedInsight</title>
-<style>
-body { font-family: -apple-system, system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #222; }
-h1 { border-bottom: 2px solid #333; padding-bottom: .5rem; }
-.placeholder { background: #f5f5f5; padding: 2rem; border-radius: 4px; text-align: center; color: #666; }
-</style>
+<title>St Louis Fed Insight</title>
+<meta name="description" content="Insurance PPI forecasting research — St Louis Fed Insight">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2306004');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
-<h1>SLFedInsight</h1>
-<p>Insurance PPI prediction model results — internal POC.</p>
-<div class="placeholder">Site is live. Model results will populate here.</div>
+
+<div class="utility-bar">
+  <div class="container">
+    <a href="#about">About</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#newsletter">Subscribe</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Swarmalytics" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">St Louis Fed Insight</span>
+        <span class="brand-tag">Insurance PPI Forecasting Research</span>
+      </div>
+    </div>
+    <form class="header-search" onsubmit="return false;" aria-label="Search">
+      <input type="search" placeholder="Search forecasts, methodology, releases…">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+<nav class="primary-nav">
+  <div class="container">
+    <a href="#latest-forecast" class="active">Latest Forecast</a>
+    <a href="#past-performance">Past Performance</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Forecasting U.S. Insurance Producer Prices</h1>
+    <p>Monthly model-driven forecasts of the Insurance Producer Price Index (WPU411), built from FRED economic data using a multi-agent search algorithm.</p>
+  </div>
+</section>
+
+<main>
+
+  <h2 class="section-title" id="latest-forecast">Latest Forecast</h2>
+  <div class="forecast-headline placeholder">
+    <div>
+      <div class="number">— —</div>
+      <div class="label">Predicted Δ in WPU411 next month</div>
+    </div>
+    <div class="body">
+      <p>The latest model run will be displayed here once the current backtest cycle completes. We update this section monthly with the predicted month-over-month change in the Insurance Producer Price Index (WPU411), alongside model confidence and the features driving the prediction.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="past-performance">Past Performance</h2>
+  <p>Backtest results comparing the model's monthly forecast to the actual BLS-published Insurance PPI delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Target Month</th>
+        <th>Horizon</th>
+        <th class="num">Predicted Δ</th>
+        <th class="num">Actual Δ</th>
+        <th class="num">Error</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Oct 2025</td>
+        <td>60d</td>
+        <td class="num">+0.023</td>
+        <td class="num">+0.017</td>
+        <td class="num">+0.006</td>
+        <td>Seasonally-adjusted target (5y trailing)</td>
+      </tr>
+      <tr>
+        <td colspan="6" style="text-align:center; color: var(--text-muted); font-style: italic;">
+          Additional results pending — current backtest cycle in progress.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-title" id="methodology">Methodology</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Target Variable</h3>
+      <div class="meta">DEPVAR</div>
+      <div class="body">Raw monthly delta of WPU411 (Insurance PPI) as published by BLS — not interpolated, with a trailing-5-year seasonal mean removed before training and added back at prediction.</div>
+    </div>
+    <div class="card">
+      <h3>Feature Universe</h3>
+      <div class="meta">~21,000 series-derivative features</div>
+      <div class="body">Constructed from FRED economic data: trailing values, differences, and percent changes at intervals of 30, 60, 120, 240, and 480 days.</div>
+    </div>
+    <div class="card">
+      <h3>Modeling</h3>
+      <div class="meta">SwarmGA — multi-agent genetic search</div>
+      <div class="body">Pre-selects 200 candidate features via random forest importance + univariate scoring; a swarm of agents searches feature subsets to maximize a held-out fitness metric.</div>
+    </div>
+    <div class="card">
+      <h3>Backtesting Protocol</h3>
+      <div class="meta">Walk-forward, no future leakage</div>
+      <div class="body">Each model is trained only on data available before the target date. Forward features are constructed from the cutoff and shifted by the forecast horizon.</div>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="about">About</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Purpose</h3>
+      <div class="body">Proof-of-concept research site for forecasting Insurance Producer Prices for use by carrier finance teams. Visible to internal staff while the methodology is validated.</div>
+    </div>
+    <div class="card">
+      <h3>Data Source</h3>
+      <div class="body">All economic series sourced from FRED (Federal Reserve Bank of St. Louis). The Insurance PPI target is BLS series WPU411.</div>
+    </div>
+    <div class="card">
+      <h3>Disclaimer</h3>
+      <div class="body">Forecasts are research outputs, not investment, underwriting, or pricing advice. Past performance does not guarantee future results.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="newsletter" id="newsletter">
+      <h4>Subscribe to updates</h4>
+      <p>Get notified when a new monthly forecast is published or methodology changes.</p>
+      <div class="ml-embedded" data-form="9eV9HD"></div>
+    </div>
+    <div>
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="#latest-forecast">Latest Forecast</a></li>
+        <li><a href="#past-performance">Past Performance</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED Economic Data</a></li>
+        <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">BLS Producer Price Index</a></li>
+        <li><a href="https://github.com/dkoehler70/slfedinsight" target="_blank" rel="noopener">Source Repository</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Internal POC</li>
+        <li>Powered by Swarmalytics</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    St Louis Fed Insight is an independent research site. Not affiliated with or endorsed by the Federal Reserve Bank of St. Louis or the U.S. Bureau of Labor Statistics.
+  </div>
+</footer>
+
 </body>
 </html>
