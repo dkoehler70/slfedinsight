@@ -63,40 +63,44 @@ ml('account', '2306004');
 <main>
 
   <h2 class="section-title" id="latest-forecast">Latest Forecast</h2>
+  <!-- AGENT:forecast:start -->
   <div class="forecast-headline placeholder">
     <div>
       <div class="number">— —</div>
       <div class="label">Predicted Δ in WPU411 next month</div>
     </div>
     <div class="body">
-      <p>The latest model run will be displayed here once the current backtest cycle completes. We update this section monthly with the predicted month-over-month change in the Insurance Producer Price Index (WPU411), alongside model confidence and the features driving the prediction.</p>
+      <p>The latest model run will be displayed here once the current backtest cycle completes.</p>
     </div>
   </div>
+  <!-- AGENT:forecast:end -->
 
   <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
-  <p>Forward-looking guidance for insurance carrier C-suite based on the current forecast and market conditions. Updated when the monthly forecast changes materially.</p>
+  <p>Forward-looking guidance for insurance carrier C-suite, grounded in the current forecast and market conditions. Refreshed each weekly model run.</p>
+  <!-- AGENT:recs:start -->
   <div class="card-grid">
     <div class="card">
       <h3>Reinsurance</h3>
       <div class="meta">CRO / CFO</div>
-      <div class="body">Recommendations on cession levels, treaty timing, and counterparty mix given the current Insurance PPI outlook.</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
     </div>
     <div class="card">
       <h3>Rate Locks</h3>
       <div class="meta">CFO / Treasury</div>
-      <div class="body">Whether to lock current rates on long-dated liabilities, or hold floating, given expected price-index direction.</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
     </div>
     <div class="card">
       <h3>Reserves</h3>
       <div class="meta">CFO / Chief Actuary</div>
-      <div class="body">Reserving posture — strengthen, hold, or release — relative to projected severity inflation in the forecast horizon.</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
     </div>
     <div class="card">
       <h3>Capital Allocation</h3>
       <div class="meta">CEO / CFO</div>
-      <div class="body">Where to deploy or pull back capital — lines of business, geographies, or asset duration — based on the current outlook.</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
     </div>
   </div>
+  <!-- AGENT:recs:end -->
 
   <h2 class="section-title" id="past-performance">Past Performance</h2>
   <p>Backtest results comparing the model's monthly forecast to the actual BLS-published Insurance PPI delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
