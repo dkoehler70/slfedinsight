@@ -75,7 +75,7 @@ ml('account', '2306004');
     </div>
     <div class="body">
       <p>The model forecasts U.S. business insurance premium prices will change <strong>+0.053%</strong> month-over-month in <strong>May 2026</strong>, relative to the most recently published BLS reading (Mar 2026).</p>
-      <p class="impact"><strong>Impact on a $500M premium book:</strong> <strong>+$265,522</strong> in revenue, if rate-followed.</p>
+      <p class="impact"><strong>Implied magnitude on a $500M book:</strong> ~<strong>+$265,522</strong>. Of similar order of magnitude across multiple value levers &mdash; rate filings and premium capture, reinsurance treaty pricing, IBNR and reserve adequacy, and underwriting capacity allocation.</p>
     </div>
   </div>
       <!-- AGENT:forecast:end -->
@@ -86,7 +86,7 @@ ml('account', '2306004');
     <canvas id="historyChart"></canvas>
   </div>
   <!-- AGENT:chart:start -->
-<script id="chart-data" type="application/json">{"actuals":[{"date":"2024-04","level":138.237},{"date":"2024-05","level":139.093},{"date":"2024-06","level":139.868},{"date":"2024-07","level":140.308},{"date":"2024-08","level":140.904},{"date":"2024-09","level":141.98},{"date":"2024-10","level":142.078},{"date":"2024-11","level":142.164},{"date":"2024-12","level":142.536},{"date":"2025-01","level":144.129},{"date":"2025-02","level":144.366},{"date":"2025-03","level":145.28},{"date":"2025-04","level":145.249},{"date":"2025-05","level":145.397},{"date":"2025-06","level":145.658},{"date":"2025-07","level":145.93},{"date":"2025-08","level":146.338},{"date":"2025-09","level":147.405},{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.826},{"date":"2026-01","level":149.563},{"date":"2026-02","level":149.636},{"date":"2026-03","level":149.998}],"predictions":[{"date":"2025-10","level":147.42821107821246,"actualKnown":true},{"date":"2025-11","level":147.5340071016398,"actualKnown":true},{"date":"2025-12","level":148.09054714122883,"actualKnown":true},{"date":"2026-01","level":148.79391182444428,"actualKnown":true},{"date":"2026-02","level":149.83236595409124,"actualKnown":true},{"date":"2026-03","level":149.9617974698463,"actualKnown":true},{"date":"2026-04","level":150.20302833827304,"actualKnown":true},{"date":"2026-05","level":150.0776556010184,"actualKnown":false}]}</script>
+<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-04","level":145.249},{"date":"2025-05","level":145.397},{"date":"2025-06","level":145.658},{"date":"2025-07","level":145.93},{"date":"2025-08","level":146.338},{"date":"2025-09","level":147.405},{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.826},{"date":"2026-01","level":149.563},{"date":"2026-02","level":149.636},{"date":"2026-03","level":149.998}],"predictions":[{"date":"2025-10","level":147.42821107821246,"actualKnown":true},{"date":"2025-11","level":147.5340071016398,"actualKnown":true},{"date":"2025-12","level":148.09054714122883,"actualKnown":true},{"date":"2026-01","level":148.79391182444428,"actualKnown":true},{"date":"2026-02","level":149.83236595409124,"actualKnown":true},{"date":"2026-03","level":149.9617974698463,"actualKnown":true},{"date":"2026-04","level":150.20302833827304,"actualKnown":true},{"date":"2026-05","level":150.0776556010184,"actualKnown":false}]}</script>
       <!-- AGENT:chart:end -->
   <script>
   (function() {
@@ -126,7 +126,7 @@ ml('account', '2306004');
       options: {
         responsive: true, maintainAspectRatio: false,
         scales: {
-          x: { ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+          x: { ticks: { maxRotation: 45, autoSkip: false } },
           y: { title: { display: true, text: 'National premium index level' } }
         },
         plugins: {
@@ -150,22 +150,22 @@ ml('account', '2306004');
     <div class="card">
       <h3>Reinsurance</h3>
       <div class="meta">CRO / CFO</div>
-      <div class="body">Premium pricing is forecast to rise modestly at +0.053% MoM in May. Confirm renewal terms with brokers now; modest upward pressure supports holding current attachment points and limits rather than expanding capacity.</div>
+      <div class="body">Premium pricing is forecast to rise 0.053% MoM in May, continuing the modest upward trend. Secure any renewal quotes expiring before end-April now; defer non-critical placements 30-45 days to capture the higher rate environment and lock in current terms.</div>
     </div>
     <div class="card">
       <h3>Rate Locks</h3>
       <div class="meta">CFO / Treasury</div>
-      <div class="body">With pricing acceleration continuing but at a measured pace, lock 25-30% of anticipated May premium volume at current forward rates to hedge against further tightening without over-committing treasury.</div>
+      <div class="body">With pricing accelerating modestly, lock 25-30% of Q2 premium volume at current rates over the next 2-3 weeks to hedge against further increases. This is a low-cost insurance given the directional consistency of recent forecasts.</div>
     </div>
     <div class="card">
       <h3>Reserves</h3>
       <div class="meta">CFO / Chief Actuary</div>
-      <div class="body">The +0.053% MoM signal is consistent with gradual hardening. Increase loss reserves by 0.10-0.15% of current reserve base to reflect modest premium inflation and maintain adequacy margins.</div>
+      <div class="body">The 0.053% MoM increase is immaterial to reserve adequacy. Maintain current reserve levels; no adjustment needed unless the forecast trajectory shifts to sustained monthly increases above 0.10%.</div>
     </div>
     <div class="card">
       <h3>Capital Allocation</h3>
       <div class="meta">CEO / CFO</div>
-      <div class="body">Sustained directional accuracy in forecasts supports incremental deployment of capital toward underwriting growth. Allocate 10-15% of available deployment capacity to new business in lines benefiting from rate momentum, contingent on May actuals confirming the forecast direction.</div>
+      <div class="body">Premium pricing momentum remains benign. Maintain current capital deployment plans. Monitor for acceleration above 0.10% MoM over the next two quarters before considering tactical redeployment into higher-yielding fixed income or opportunistic M&amp;A.</div>
     </div>
   </div>
       <!-- AGENT:recs:end -->
