@@ -81,7 +81,7 @@ ml('account', '2306004');
       <!-- AGENT:forecast:end -->
 
   <h2 class="section-title" id="history-chart">National Premium Index — History &amp; Forecasts</h2>
-  <p>Historical level of the national business insurance premium price index, with model forecasts overlaid. Each forecast point is anchored to the actual prior month, so cumulative error does not compound across the chart.</p>
+  <p>Historical level of the national business insurance premium price index, with model forecasts overlaid.</p>
   <div class="chart-container">
     <canvas id="historyChart"></canvas>
   </div>
@@ -118,7 +118,7 @@ ml('account', '2306004');
         datasets: [
           { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b', backgroundColor: '#18416b',
             borderWidth: 2, pointRadius: 3, spanGaps: true, tension: 0.1 },
-          { label: 'Model forecast (anchored to prior actual)', data: predSeries,
+          { label: 'Model forecast', data: predSeries,
             borderColor: '#c0782a', backgroundColor: '#c0782a',
             borderWidth: 0, pointRadius: 5, pointStyle: 'rectRot', showLine: false, spanGaps: true }
         ]
