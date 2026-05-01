@@ -49,8 +49,8 @@ ml('account', '2306004');
 <nav class="primary-nav">
   <div class="container">
     <a href="#latest-forecast" class="active">Latest Forecast</a>
-    <a href="#history-chart">History &amp; Forecasts</a>
     <a href="#executive-recommendations">Executive Recommendations</a>
+    <a href="#history-chart">History &amp; Forecasts</a>
     <a href="#past-performance">Past Performance</a>
     <a href="#methodology">Methodology</a>
     <a href="#about">About</a>
@@ -79,6 +79,33 @@ ml('account', '2306004');
     </div>
   </div>
       <!-- AGENT:forecast:end -->
+
+  <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
+  <p>Forward-looking guidance for insurance carrier C-suite, grounded in the current forecast and market conditions. Refreshed each weekly model run.</p>
+  <!-- AGENT:recs:start -->
+<div class="card-grid">
+    <div class="card">
+      <h3>Reinsurance</h3>
+      <div class="meta">CRO / CFO</div>
+      <div class="body">Premium pricing is forecast to rise 0.053% MoM in May, continuing the gradual upward trend. Secure any renewal placements due in late April or May now to lock current terms before the increase takes effect.</div>
+    </div>
+    <div class="card">
+      <h3>Rate Locks</h3>
+      <div class="meta">CFO / Treasury</div>
+      <div class="body">With modest but consistent upward pressure on premiums, lock 25-30% of anticipated May premium volume at current rates to reduce exposure to the forecasted 0.053% increase while preserving pricing flexibility for the remainder of the quarter.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves</h3>
+      <div class="meta">CFO / Chief Actuary</div>
+      <div class="body">The forecast signals continued, albeit modest, premium inflation. Review reserve adequacy for Q2 and adjust for cumulative pricing movement of approximately 0.15-0.20% YTD; no material reserve increase is warranted at this magnitude, but document the trend for next quarterly review.</div>
+    </div>
+    <div class="card">
+      <h3>Capital Allocation</h3>
+      <div class="meta">CEO / CFO</div>
+      <div class="body">Premium pricing momentum remains positive but measured. Maintain current capital deployment plans; the 0.053% MoM forecast does not justify material shifts in underwriting appetite or investment posture, but continue monitoring for acceleration beyond 0.10% MoM.</div>
+    </div>
+  </div>
+      <!-- AGENT:recs:end -->
 
   <h2 class="section-title" id="history-chart">National Premium Index — History &amp; Forecasts</h2>
   <p>Historical level of the national business insurance premium price index, with model forecasts overlaid.</p>
@@ -147,33 +174,6 @@ ml('account', '2306004');
     });
   })();
   </script>
-
-  <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
-  <p>Forward-looking guidance for insurance carrier C-suite, grounded in the current forecast and market conditions. Refreshed each weekly model run.</p>
-  <!-- AGENT:recs:start -->
-<div class="card-grid">
-    <div class="card">
-      <h3>Reinsurance</h3>
-      <div class="meta">CRO / CFO</div>
-      <div class="body">Premium pricing is forecast to rise 0.053% MoM in May, continuing the gradual upward trend. Secure any renewal placements due in late April or May now to lock current terms before the increase takes effect.</div>
-    </div>
-    <div class="card">
-      <h3>Rate Locks</h3>
-      <div class="meta">CFO / Treasury</div>
-      <div class="body">With modest but consistent upward pressure on premiums, lock 25-30% of anticipated May premium volume at current rates to reduce exposure to the forecasted 0.053% increase while preserving pricing flexibility for the remainder of the quarter.</div>
-    </div>
-    <div class="card">
-      <h3>Reserves</h3>
-      <div class="meta">CFO / Chief Actuary</div>
-      <div class="body">The forecast signals continued, albeit modest, premium inflation. Review reserve adequacy for Q2 and adjust for cumulative pricing movement of approximately 0.15-0.20% YTD; no material reserve increase is warranted at this magnitude, but document the trend for next quarterly review.</div>
-    </div>
-    <div class="card">
-      <h3>Capital Allocation</h3>
-      <div class="meta">CEO / CFO</div>
-      <div class="body">Premium pricing momentum remains positive but measured. Maintain current capital deployment plans; the 0.053% MoM forecast does not justify material shifts in underwriting appetite or investment posture, but continue monitoring for acceleration beyond 0.10% MoM.</div>
-    </div>
-  </div>
-      <!-- AGENT:recs:end -->
 
   <h2 class="section-title" id="past-performance">Past Performance</h2>
   <p>Backtest results comparing the model's monthly forecast to the actual BLS-published Insurance PPI delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
@@ -312,8 +312,8 @@ ml('account', '2306004');
       <h4>Sections</h4>
       <ul>
         <li><a href="#latest-forecast">Latest Forecast</a></li>
-        <li><a href="#history-chart">History &amp; Forecasts</a></li>
         <li><a href="#executive-recommendations">Executive Recommendations</a></li>
+        <li><a href="#history-chart">History &amp; Forecasts</a></li>
         <li><a href="#past-performance">Past Performance</a></li>
         <li><a href="#methodology">Methodology</a></li>
         <li><a href="#about">About</a></li>
