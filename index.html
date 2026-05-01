@@ -86,7 +86,7 @@ ml('account', '2306004');
     <canvas id="historyChart"></canvas>
   </div>
   <!-- AGENT:chart:start -->
-<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-04","level":145.249},{"date":"2025-05","level":145.397},{"date":"2025-06","level":145.658},{"date":"2025-07","level":145.93},{"date":"2025-08","level":146.338},{"date":"2025-09","level":147.405},{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.826},{"date":"2026-01","level":149.563},{"date":"2026-02","level":149.636},{"date":"2026-03","level":149.998}],"predictions":[{"date":"2025-10","level":147.42821107821246,"actualKnown":true},{"date":"2025-11","level":147.5340071016398,"actualKnown":true},{"date":"2025-12","level":148.09054714122883,"actualKnown":true},{"date":"2026-01","level":148.79391182444428,"actualKnown":true},{"date":"2026-02","level":149.83236595409124,"actualKnown":true},{"date":"2026-03","level":149.9617974698463,"actualKnown":true},{"date":"2026-04","level":150.20302833827304,"actualKnown":true},{"date":"2026-05","level":150.0776556010184,"actualKnown":false}]}</script>
+<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-04","level":145.249},{"date":"2025-05","level":145.397},{"date":"2025-06","level":145.658},{"date":"2025-07","level":145.93},{"date":"2025-08","level":146.338},{"date":"2025-09","level":147.405},{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.826},{"date":"2026-01","level":149.563},{"date":"2026-02","level":149.636},{"date":"2026-03","level":149.998}],"predictions":[{"date":"2025-10","level":147.42821107821246,"actualKnown":true},{"date":"2025-11","level":147.5340071016398,"actualKnown":true},{"date":"2025-12","level":148.09054714122883,"actualKnown":true},{"date":"2026-01","level":148.79391182444428,"actualKnown":true},{"date":"2026-02","level":149.83236595409124,"actualKnown":true},{"date":"2026-03","level":149.9617974698463,"actualKnown":true},{"date":"2026-04","level":150.20302833827304,"actualKnown":true},{"date":"2026-05","level":150.28268393929145,"actualKnown":false}]}</script>
       <!-- AGENT:chart:end -->
   <script>
   (function() {
@@ -116,8 +116,9 @@ ml('account', '2306004');
       data: {
         labels: labels,
         datasets: [
-          { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b', backgroundColor: '#18416b',
-            borderWidth: 2, pointRadius: 3, spanGaps: true, tension: 0.1 },
+          { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b',
+            backgroundColor: '#18416b', pointBackgroundColor: '#ffffff',
+            borderWidth: 2, pointBorderWidth: 2, pointRadius: 4, spanGaps: true, tension: 0.1 },
           { label: 'Model forecast', data: predSeries,
             borderColor: '#c0782a', backgroundColor: '#c0782a',
             borderWidth: 0, pointRadius: 5, pointStyle: 'rectRot', showLine: false, spanGaps: true }
@@ -150,22 +151,22 @@ ml('account', '2306004');
     <div class="card">
       <h3>Reinsurance</h3>
       <div class="meta">CRO / CFO</div>
-      <div class="body">Premium pricing is forecast to rise 0.053% MoM in May, continuing the modest upward trend. Secure any renewal quotes expiring before end-April now; defer non-critical placements 30-45 days to capture the higher rate environment and lock in current terms.</div>
+      <div class="body">Premium pricing is forecast to rise modestly at +0.053% MoM in May. Secure renewal quotes now for June-July placements to lock in current rates before any further acceleration; a 0.05% monthly drift compounds quickly across the renewal cycle.</div>
     </div>
     <div class="card">
       <h3>Rate Locks</h3>
       <div class="meta">CFO / Treasury</div>
-      <div class="body">With pricing accelerating modestly, lock 25-30% of Q2 premium volume at current rates over the next 2-3 weeks to hedge against further increases. This is a low-cost insurance given the directional consistency of recent forecasts.</div>
+      <div class="body">With pricing momentum continuing upward, lock 25-30% of anticipated May premium volume at current rates over the next 30 days to hedge against further increases. This modest hedge matches the small but consistent upward signal.</div>
     </div>
     <div class="card">
       <h3>Reserves</h3>
       <div class="meta">CFO / Chief Actuary</div>
-      <div class="body">The 0.053% MoM increase is immaterial to reserve adequacy. Maintain current reserve levels; no adjustment needed unless the forecast trajectory shifts to sustained monthly increases above 0.10%.</div>
+      <div class="body">Increase loss reserves by 0.10-0.15% to reflect the rising premium environment and tighter underwriting margins. This conservative but proportionate adjustment accounts for the sustained pricing trend without over-reserving on a single month&#39;s forecast.</div>
     </div>
     <div class="card">
       <h3>Capital Allocation</h3>
       <div class="meta">CEO / CFO</div>
-      <div class="body">Premium pricing momentum remains benign. Maintain current capital deployment plans. Monitor for acceleration above 0.10% MoM over the next two quarters before considering tactical redeployment into higher-yielding fixed income or opportunistic M&amp;A.</div>
+      <div class="body">Maintain current capital deployment; the +0.053% MoM signal does not warrant material shifts. However, flag to the board that if this pricing momentum persists through Q2, capacity expansion opportunities may emerge in 60-90 days as competitors face margin pressure.</div>
     </div>
   </div>
       <!-- AGENT:recs:end -->
