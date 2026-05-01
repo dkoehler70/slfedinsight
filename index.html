@@ -7,6 +7,7 @@
 <meta name="description" content="Insurance PPI forecasting research — St Louis Fed Insight">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
@@ -30,10 +31,12 @@ ml('account', '2306004');
 <header class="site-header">
   <div class="container">
     <div class="brand">
-      <img src="assets/logo.png" alt="Swarmalytics" class="brand-logo">
+      <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">
+        <img src="assets/logo.png" alt="Swarmalytics" class="brand-logo">
+      </a>
       <div class="brand-text">
         <span class="brand-name">St Louis Fed Insight</span>
-        <span class="brand-tag">Insurance PPI Forecasting Research</span>
+        <span class="brand-tag">U.S. Business Insurance Premium Forecasting</span>
       </div>
     </div>
     <form class="header-search" onsubmit="return false;" aria-label="Search">
@@ -46,6 +49,7 @@ ml('account', '2306004');
 <nav class="primary-nav">
   <div class="container">
     <a href="#latest-forecast" class="active">Latest Forecast</a>
+    <a href="#history-chart">History &amp; Forecasts</a>
     <a href="#executive-recommendations">Executive Recommendations</a>
     <a href="#past-performance">Past Performance</a>
     <a href="#methodology">Methodology</a>
@@ -55,8 +59,8 @@ ml('account', '2306004');
 
 <section class="hero">
   <div class="container">
-    <h1>Forecasting U.S. Insurance Producer Prices</h1>
-    <p>Monthly model-driven forecasts of the Insurance Producer Price Index (WPU411), built from FRED economic data using a multi-agent search algorithm.</p>
+    <h1>Forecasting U.S. Business Insurance Premium Prices</h1>
+    <p>Monthly model-driven forecasts of the national index of business insurance premium prices, built from public economic data.</p>
   </div>
 </section>
 
@@ -74,6 +78,69 @@ ml('account', '2306004');
     </div>
   </div>
       <!-- AGENT:forecast:end -->
+
+  <h2 class="section-title" id="history-chart">National Premium Index — History &amp; Forecasts</h2>
+  <p>Historical level of the national business insurance premium price index, with model forecasts overlaid. Each forecast point is anchored to the actual prior month, so cumulative error does not compound across the chart.</p>
+  <div class="chart-container">
+    <canvas id="historyChart"></canvas>
+  </div>
+  <!-- AGENT:chart:start -->
+  <script id="chart-data" type="application/json">{"actuals":[],"predictions":[]}</script>
+  <!-- AGENT:chart:end -->
+  <script>
+  (function() {
+    var dataEl = document.getElementById('chart-data');
+    if (!dataEl) return;
+    var data;
+    try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var ctx = document.getElementById('historyChart');
+    if (!ctx || !window.Chart) return;
+    if (!data.actuals.length && !data.predictions.length) return;
+
+    // Build a unified, sorted x-axis from union of dates
+    var allDates = {};
+    data.actuals.forEach(function(p) { allDates[p.date] = true; });
+    data.predictions.forEach(function(p) { allDates[p.date] = true; });
+    var labels = Object.keys(allDates).sort();
+
+    var actualsByDate = {}; data.actuals.forEach(function(p) { actualsByDate[p.date] = p.level; });
+    var predsByDate = {};   data.predictions.forEach(function(p) { predsByDate[p.date] = p; });
+
+    var actualSeries = labels.map(function(d) { return actualsByDate[d] != null ? actualsByDate[d] : null; });
+    var predSeries   = labels.map(function(d) { return predsByDate[d] != null ? predsByDate[d].level : null; });
+    var predOpenIdx  = labels.map(function(d) { return predsByDate[d] && predsByDate[d].actualKnown === false; });
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b', backgroundColor: '#18416b',
+            borderWidth: 2, pointRadius: 3, spanGaps: true, tension: 0.1 },
+          { label: 'Model forecast (anchored to prior actual)', data: predSeries,
+            borderColor: '#c0782a', backgroundColor: '#c0782a',
+            borderWidth: 0, pointRadius: 5, pointStyle: 'rectRot', showLine: false, spanGaps: true }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+          y: { title: { display: true, text: 'National premium index level' } }
+        },
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: { callbacks: {
+            afterLabel: function(ctx) {
+              if (ctx.datasetIndex === 1 && predOpenIdx[ctx.dataIndex]) return 'Open forecast (target month not yet published)';
+              return '';
+            }
+          }}
+        }
+      }
+    });
+  })();
+  </script>
 
   <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
   <p>Forward-looking guidance for insurance carrier C-suite, grounded in the current forecast and market conditions. Refreshed each weekly model run.</p>
@@ -239,6 +306,7 @@ ml('account', '2306004');
       <h4>Sections</h4>
       <ul>
         <li><a href="#latest-forecast">Latest Forecast</a></li>
+        <li><a href="#history-chart">History &amp; Forecasts</a></li>
         <li><a href="#executive-recommendations">Executive Recommendations</a></li>
         <li><a href="#past-performance">Past Performance</a></li>
         <li><a href="#methodology">Methodology</a></li>
@@ -250,14 +318,13 @@ ml('account', '2306004');
       <ul>
         <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED Economic Data</a></li>
         <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">BLS Producer Price Index</a></li>
-        <li><a href="https://github.com/dkoehler70/slfedinsight" target="_blank" rel="noopener">Source Repository</a></li>
       </ul>
     </div>
     <div>
       <h4>Contact</h4>
       <ul>
         <li>Internal POC</li>
-        <li>Powered by Swarmalytics</li>
+        <li>Powered by <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">Swarmalytics</a></li>
       </ul>
     </div>
   </div>

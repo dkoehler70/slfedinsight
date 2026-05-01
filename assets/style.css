@@ -140,6 +140,21 @@ main { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
 .forecast-headline .label { color: var(--text-muted); font-size: 13px; text-transform: uppercase; letter-spacing: .5px; }
 .forecast-headline .body { font-size: 14px; }
 .forecast-headline.placeholder .number { color: var(--text-muted); }
+.forecast-headline .impact {
+  margin-top: .75rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--navy);
+}
+
+.chart-container {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  height: 360px;
+  margin-bottom: 1rem;
+}
 
 table.data {
   width: 100%; border-collapse: collapse; background: #fff;
