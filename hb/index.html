@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Builders Insight</title>
+<meta name="description" content="U.S. home builder material &amp; subcontractor cost forecasting — Home Builders Insight">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2306004');
+</script>
+<!-- End MailerLite Universal -->
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <a href="/">Insurance Edition</a>
+    <a href="#about">About</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#newsletter">Subscribe</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">
+        <img src="../assets/logo.png" alt="Swarmalytics" class="brand-logo">
+      </a>
+      <div class="brand-text">
+        <span class="brand-name">Home Builders Insight</span>
+        <span class="brand-tag">U.S. Home Builder Material &amp; Subcontractor Cost Outlook</span>
+      </div>
+    </div>
+    <form class="header-search" onsubmit="return false;" aria-label="Search">
+      <input type="search" placeholder="Search forecasts, methodology, releases…">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+<nav class="primary-nav">
+  <div class="container">
+    <a href="#latest-forecast" class="active">Latest Forecast</a>
+    <a href="#executive-recommendations">Executive Recommendations</a>
+    <a href="#current-drivers">Current Driving Factors</a>
+    <a href="#history-chart">History &amp; Forecasts</a>
+    <a href="#past-performance">Past Performance</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Forecasting U.S. Home Builder Input Costs</h1>
+    <p>Monthly model-driven forecasts of a composite index of lumber, steel, concrete, gypsum, and building-materials wholesale costs, built from public economic data.</p>
+  </div>
+</section>
+
+<main>
+
+  <h2 class="section-title" id="latest-forecast">Latest Forecast</h2>
+  <!-- AGENT:forecast:start -->
+  <div class="forecast-headline placeholder">
+    <div>
+      <div class="number">— —</div>
+      <div class="label">Predicted MoM change in U.S. home builder input costs</div>
+    </div>
+    <div class="body">
+      <p>The first Home Builders forecast will populate after the next weekly model run.</p>
+    </div>
+  </div>
+  <!-- AGENT:forecast:end -->
+
+  <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
+  <p>Forward-looking guidance for home builder C-suite, grounded in the current cost-input forecast. Refreshed each weekly model run.</p>
+  <!-- AGENT:recs:start -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>Material Procurement</h3>
+      <div class="meta">VP Procurement / CFO</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+    </div>
+    <div class="card">
+      <h3>Subcontractor Pricing</h3>
+      <div class="meta">VP Construction / CFO</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+    </div>
+    <div class="card">
+      <h3>Land Acquisition</h3>
+      <div class="meta">CEO / VP Land</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+    </div>
+    <div class="card">
+      <h3>Supply Constraints</h3>
+      <div class="meta">VP Procurement / VP Construction</div>
+      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+    </div>
+  </div>
+  <!-- AGENT:recs:end -->
+
+  <h2 class="section-title" id="current-drivers">Current Driving Factors</h2>
+  <p>Broad economic categories currently feeding the forecast. Each refreshes when the model retrains.</p>
+  <!-- AGENT:drivers:start -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>Pending</h3>
+      <div class="meta">awaiting next run</div>
+      <div class="body">Driver themes will populate after the next weekly forecast run.</div>
+    </div>
+  </div>
+  <!-- AGENT:drivers:end -->
+
+  <h2 class="section-title" id="history-chart">Builder Input Index — History &amp; Forecasts</h2>
+  <p>Historical level of the composite home builder input cost index, with model forecasts overlaid.</p>
+  <div class="chart-container">
+    <canvas id="historyChart"></canvas>
+  </div>
+  <!-- AGENT:chart:start -->
+  <script id="chart-data" type="application/json">{"actuals":[],"predictions":[]}</script>
+  <!-- AGENT:chart:end -->
+  <script>
+  (function() {
+    var dataEl = document.getElementById('chart-data');
+    if (!dataEl) return;
+    var data;
+    try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var ctx = document.getElementById('historyChart');
+    if (!ctx || !window.Chart) return;
+    if (!data.actuals.length && !data.predictions.length) return;
+
+    var allDates = {};
+    data.actuals.forEach(function(p) { allDates[p.date] = true; });
+    data.predictions.forEach(function(p) { allDates[p.date] = true; });
+    var labels = Object.keys(allDates).sort();
+
+    var actualsByDate = {}; data.actuals.forEach(function(p) { actualsByDate[p.date] = p.level; });
+    var predsByDate = {};   data.predictions.forEach(function(p) { predsByDate[p.date] = p; });
+
+    var actualSeries = labels.map(function(d) { return actualsByDate[d] != null ? actualsByDate[d] : null; });
+    var predSeries   = labels.map(function(d) { return predsByDate[d] != null ? predsByDate[d].level : null; });
+    var predOpenIdx  = labels.map(function(d) { return predsByDate[d] && predsByDate[d].actualKnown === false; });
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b',
+            backgroundColor: '#18416b', pointBackgroundColor: '#ffffff',
+            borderWidth: 2, pointBorderWidth: 2, pointRadius: 4, spanGaps: true, tension: 0.1,
+            order: 2 },
+          { label: 'Model forecast', data: predSeries,
+            borderColor: '#c0782a', backgroundColor: '#c0782a',
+            borderWidth: 1.5, borderDash: [4, 4],
+            pointRadius: 8, pointStyle: 'rectRot',
+            showLine: true, spanGaps: true,
+            order: 1 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { ticks: { maxRotation: 45, autoSkip: false } },
+          y: { title: { display: true, text: 'Composite builder input index level' } }
+        },
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: { callbacks: {
+            afterLabel: function(ctx) {
+              if (ctx.datasetIndex === 1 && predOpenIdx[ctx.dataIndex]) return 'Open forecast (target month not yet published)';
+              return '';
+            }
+          }}
+        }
+      }
+    });
+  })();
+  </script>
+
+  <h2 class="section-title" id="past-performance">Past Performance</h2>
+  <p>Backtest results comparing the model's monthly forecast to the actual BLS-published composite-input delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Target Month</th>
+        <th>Horizon</th>
+        <th class="num">Predicted Δ</th>
+        <th class="num">Actual Δ</th>
+        <th class="num">Error</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- AGENT:past:start -->
+      <tr>
+        <td colspan="6" style="text-align:center; color: var(--text-muted); font-style: italic;">
+          First forecast pending.
+        </td>
+      </tr>
+      <!-- AGENT:past:end -->
+    </tbody>
+  </table>
+
+  <h2 class="section-title" id="methodology">Methodology</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Target Variable</h3>
+      <div class="meta">DEPVAR</div>
+      <div class="body">Monthly delta of an equal-weighted composite of five BLS Producer Price Indices for builder inputs (lumber, iron &amp; steel, concrete ingredients, gypsum, and building-materials wholesale margins). A trailing-5-year seasonal mean is removed before training and added back at prediction.</div>
+    </div>
+    <div class="card">
+      <h3>Feature Universe</h3>
+      <div class="meta">~21,000 series-derivative features</div>
+      <div class="body">Constructed from FRED economic data: trailing values, differences, and percent changes at intervals of 30, 60, 120, 240, and 480 days.</div>
+    </div>
+    <div class="card">
+      <h3>Modeling</h3>
+      <div class="meta">SwarmGA — multi-agent genetic search</div>
+      <div class="body">Pre-selects 200 candidate features via random forest importance + univariate scoring; a swarm of agents searches feature subsets to maximize a held-out fitness metric.</div>
+    </div>
+    <div class="card">
+      <h3>Backtesting Protocol</h3>
+      <div class="meta">Walk-forward, no future leakage</div>
+      <div class="body">Each model is trained only on data available before the target date. Forward features are constructed from the cutoff and shifted by the forecast horizon.</div>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="about">About</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Purpose</h3>
+      <div class="body">Proof-of-concept research site for forecasting home builder input costs (materials and wholesale margins) for use by builder finance and procurement teams. Sister product to the Insurance Edition.</div>
+    </div>
+    <div class="card">
+      <h3>Data Source</h3>
+      <div class="body">All economic series sourced from FRED (Federal Reserve Bank of St. Louis). The composite target is built from BLS series WPU081, WPU101, WPU132, WPU137, and WPU573.</div>
+    </div>
+    <div class="card">
+      <h3>Disclaimer</h3>
+      <div class="body">Forecasts are research outputs, not procurement, hedging, or pricing advice. Past performance does not guarantee future results.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="newsletter" id="newsletter">
+      <h4>Subscribe to updates</h4>
+      <p>Get notified when a new monthly Home Builders forecast is published.</p>
+      <div class="ml-embedded" data-form="HB_FORM_PENDING"></div>
+    </div>
+    <div>
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="#latest-forecast">Latest Forecast</a></li>
+        <li><a href="#executive-recommendations">Executive Recommendations</a></li>
+        <li><a href="#current-drivers">Current Driving Factors</a></li>
+        <li><a href="#history-chart">History &amp; Forecasts</a></li>
+        <li><a href="#past-performance">Past Performance</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED Economic Data</a></li>
+        <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">BLS Producer Price Index</a></li>
+        <li><a href="/">Insurance Edition</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Internal POC</li>
+        <li>Powered by <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">Swarmalytics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    Home Builders Insight is an independent research site. Not affiliated with or endorsed by the Federal Reserve Bank of St. Louis or the U.S. Bureau of Labor Statistics.
+  </div>
+</footer>
+
+</body>
+</html>
