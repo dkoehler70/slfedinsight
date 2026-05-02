@@ -70,55 +70,71 @@ ml('account', '2306004');
 
   <h2 class="section-title" id="latest-forecast">Latest Forecast</h2>
   <!-- AGENT:forecast:start -->
-  <div class="forecast-headline placeholder">
+<div class="forecast-headline">
     <div>
-      <div class="number">— —</div>
-      <div class="label">Predicted MoM change in U.S. home builder input costs</div>
+      <div class="number">-1.000%</div>
+      <div class="label">Predicted MoM change in U.S. home builder input costs for Jun 2026</div>
     </div>
     <div class="body">
-      <p>The first Home Builders forecast will populate after the next weekly model run.</p>
+      <p>The model forecasts U.S. home builder input costs will change <strong>-1.000%</strong> month-over-month in <strong>Jun 2026</strong>, relative to the most recently published BLS reading (Mar 2026).</p>
+      <p class="impact"><strong>Implied magnitude on a $500M annual revenue:</strong> ~<strong>-$5,000,356</strong>. Of similar order of magnitude across material procurement, subcontractor pricing, land acquisition, supply constraints.</p>
     </div>
   </div>
-  <!-- AGENT:forecast:end -->
+      <!-- AGENT:forecast:end -->
 
   <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
   <p>Forward-looking guidance for home builder C-suite, grounded in the current cost-input forecast. Refreshed each weekly model run.</p>
   <!-- AGENT:recs:start -->
-  <div class="card-grid">
+<div class="card-grid">
     <div class="card">
       <h3>Material Procurement</h3>
       <div class="meta">VP Procurement / CFO</div>
-      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+      <div class="body">Lock in pricing on lumber, steel, and concrete for Q3 2026 starts within the next 30 days; a 1% cost decline is materializing, but forward commitments now will protect against any forecast miss and secure supplier allocation before competitors act.</div>
     </div>
     <div class="card">
       <h3>Subcontractor Pricing</h3>
       <div class="meta">VP Construction / CFO</div>
-      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+      <div class="body">Negotiate Q3 labor and trade contracts immediately while subcontractors anticipate margin compression from falling input costs; push for 0.75–1.0% price reductions on framing, mechanical, and electrical work to pass through the full benefit to your margin.</div>
     </div>
     <div class="card">
       <h3>Land Acquisition</h3>
       <div class="meta">CEO / VP Land</div>
-      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+      <div class="body">Maintain current land acquisition pace; a 1% input cost decline improves project economics modestly but does not yet justify aggressive land buying or acceleration of development timelines.</div>
     </div>
     <div class="card">
       <h3>Supply Constraints</h3>
       <div class="meta">VP Procurement / VP Construction</div>
-      <div class="body">Recommendations will populate after the next weekly forecast run.</div>
+      <div class="body">Monitor supplier inventory levels and lead times closely over the next 45 days; falling costs may trigger supplier destocking or consolidation, creating temporary allocation tightness even as prices ease—secure commitments on long-lead items (windows, HVAC units) before June.</div>
     </div>
   </div>
-  <!-- AGENT:recs:end -->
+      <!-- AGENT:recs:end -->
 
   <h2 class="section-title" id="current-drivers">Current Driving Factors</h2>
   <p>Broad economic categories currently feeding the forecast. Each refreshes when the model retrains.</p>
   <!-- AGENT:drivers:start -->
-  <div class="card-grid">
+<div class="card-grid">
     <div class="card">
-      <h3>Pending</h3>
-      <div class="meta">awaiting next run</div>
-      <div class="body">Driver themes will populate after the next weekly forecast run.</div>
+      <h3>Wealth concentration</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Top earners are accumulating mortgages and pension assets while middle-class wealth share declines, potentially reducing demand pressure on builder input costs.</div>
+    </div>
+    <div class="card">
+      <h3>Service and repair inflation</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">Household repair costs and airline fares are moderating, signaling broader easing in service-sector pricing that may ease builder labor and logistics expenses.</div>
+    </div>
+    <div class="card">
+      <h3>Housing market softness</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">Rising price reductions in housing inventory suggest cooling demand, which typically reduces competition for materials and labor in the construction supply chain.</div>
+    </div>
+    <div class="card">
+      <h3>Financial asset valuations</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Bank securities holdings and export prices are shifting, reflecting tighter financial conditions that could increase borrowing costs for builder operations and inventory.</div>
     </div>
   </div>
-  <!-- AGENT:drivers:end -->
+      <!-- AGENT:drivers:end -->
 
   <h2 class="section-title" id="history-chart">Builder Input Index — History &amp; Forecasts</h2>
   <p>Historical level of the composite home builder input cost index, with model forecasts overlaid.</p>
@@ -126,8 +142,8 @@ ml('account', '2306004');
     <canvas id="historyChart"></canvas>
   </div>
   <!-- AGENT:chart:start -->
-  <script id="chart-data" type="application/json">{"actuals":[],"predictions":[]}</script>
-  <!-- AGENT:chart:end -->
+<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-04","level":333.00800000000004},{"date":"2025-05","level":335.6004},{"date":"2025-06","level":333.0194},{"date":"2025-07","level":331.4826},{"date":"2025-08","level":332.4428},{"date":"2025-09","level":330.25120000000004},{"date":"2025-10","level":329.108},{"date":"2025-11","level":327.03380000000004},{"date":"2025-12","level":330.577},{"date":"2026-01","level":334.80859999999996},{"date":"2026-02","level":339.0864},{"date":"2026-03","level":338.9214}],"predictions":[{"date":"2026-06","level":335.5319448713725,"actualKnown":false}]}</script>
+      <!-- AGENT:chart:end -->
   <script>
   (function() {
     var dataEl = document.getElementById('chart-data');
@@ -203,10 +219,13 @@ ml('account', '2306004');
     </thead>
     <tbody>
       <!-- AGENT:past:start -->
-      <tr>
-        <td colspan="6" style="text-align:center; color: var(--text-muted); font-style: italic;">
-          First forecast pending.
-        </td>
+<tr>
+        <td>Jun 2026</td>
+        <td>60d</td>
+        <td class="num">-3.389</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
       </tr>
       <!-- AGENT:past:end -->
     </tbody>
