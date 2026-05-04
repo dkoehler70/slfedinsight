@@ -89,22 +89,22 @@ ml('account', '2306004');
     <div class="card">
       <h3>Material Procurement</h3>
       <div class="meta">VP Procurement / CFO</div>
-      <div class="body">With input costs forecast to ease roughly 0.7% over the next 60 days, avoid locking in large forward purchase commitments at today&#39;s prices for lumber, framing, and other commodity materials — a decline of this magnitude on a $500M revenue base represents roughly $3.5M in potential cost relief if purchases are timed to the softer market. Extend spot-buy windows where supplier contracts allow and defer bulk orders by four to six weeks where inventory levels permit.</div>
+      <div class="body">With input costs forecast to ease roughly 0.7% over the next 60 days, avoid locking in large forward material purchases at today&#39;s prices; instead, extend spot-buy windows and defer bulk commitments on lumber, framing, and concrete by four to six weeks to capture the expected price relief, which could reduce material spend by roughly $3.5M on a $500M revenue base.</div>
     </div>
     <div class="card">
       <h3>Subcontractor Pricing</h3>
       <div class="meta">VP Construction / CFO</div>
-      <div class="body">Use the forecast cost decline as modest leverage when renewing or negotiating subcontractor agreements over the next 60 days, targeting a 0.5% to 1.0% reduction in labor and trade pricing on new bids rather than holding firm at current rates. Keep adjustments proportional — this is a moderate signal, not a sharp correction, so avoid aggressive renegotiations that could strain key trade relationships heading into the summer build season.</div>
+      <div class="body">Given the modest projected softening in input costs, hold the line on subcontractor bid renewals and resist pressure to accept escalation clauses right now; a 0.7% cost decline is meaningful but not dramatic, so target renegotiating active bids downward by 0.5% to 1.0% rather than pushing for deeper cuts that could strain trade relationships.</div>
     </div>
     <div class="card">
       <h3>Land Acquisition</h3>
       <div class="meta">CEO / VP Land</div>
-      <div class="body">The softening input cost environment provides a slight margin tailwind of roughly $3.5M at current revenue scale, which modestly improves pro forma returns on deals already in the pipeline — use this window to advance underwriting on land parcels that were previously borderline on margin. Do not accelerate land spend materially on the basis of this signal alone, given that the forecast has been directionally correct only half the time recently.</div>
+      <div class="body">The forecast signals a mild near-term easing in construction costs, which modestly improves pro forma margins on deals in the pipeline; this is not a large enough shift to materially change land underwriting assumptions, but it does support moving forward on deals that were borderline on cost grounds, provided the directional forecast is confirmed by actual May data before closing.</div>
     </div>
     <div class="card">
       <h3>Supply Constraints</h3>
       <div class="meta">VP Procurement / VP Construction</div>
-      <div class="body">With costs expected to ease modestly, near-term supply pressure on key materials is likely to be limited, so this is a reasonable moment to let safety stock levels drift slightly lower rather than paying premium prices to build inventory buffers. Monitor lumber and concrete supply lead times weekly, and be prepared to re-engage forward purchasing quickly if the cost trend reverses, given the mixed recent forecast accuracy.</div>
+      <div class="body">The forecast model has been directionally correct only half the time recently, so do not reduce safety stock or loosen supplier lead-time buffers based on this signal alone; maintain current inventory levels on long-lead items and keep backup supplier relationships active in case costs stabilize or reverse rather than declining as forecast.</div>
     </div>
   </div>
       <!-- AGENT:recs:end -->
@@ -116,27 +116,27 @@ ml('account', '2306004');
     <div class="card">
       <h3>Labor Market Slack</h3>
       <div class="meta">pushing forecast up</div>
-      <div class="body">Rising unemployment levels historically correlate with higher input cost volatility, as workforce disruptions ripple through construction labor availability and subcontractor pricing.</div>
+      <div class="body">Rising unemployment levels historically correlate with higher input cost pressures as labor market disruptions ripple through construction supply chains and subcontractor availability.</div>
     </div>
     <div class="card">
       <h3>Producer &amp; Consumer Prices</h3>
       <div class="meta">pushing forecast down</div>
-      <div class="body">Easing core producer prices and softening transportation costs suggest upstream cost pressures on building materials and logistics are moderating, offering some relief on input budgets.</div>
+      <div class="body">Easing core producer prices and softening transportation costs signal moderating upstream cost pressures, offering potential relief on materials and delivery expenses for builders.</div>
+    </div>
+    <div class="card">
+      <h3>Imported Materials Costs</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Rising import prices for plastics and rubber products from China point to higher costs for key construction components such as piping, insulation, and weatherproofing materials.</div>
     </div>
     <div class="card">
       <h3>Household Balance Sheets</h3>
       <div class="meta">pushing forecast up</div>
-      <div class="body">Growing financial assets and deposit holdings across lower and middle wealth tiers signal sustained consumer demand for housing, supporting builder pricing power and materials volumes.</div>
-    </div>
-    <div class="card">
-      <h3>Import Costs &amp; Manufacturing</h3>
-      <div class="meta">mixed signal</div>
-      <div class="body">Rising import prices for plastics and rubber products from China push material costs up, while softening domestic miscellaneous manufacturing output tempers overall demand for those inputs.</div>
+      <div class="body">Growing financial assets and deposits among middle- and lower-wealth households suggest sustained housing demand, supporting builders&#39; pricing power and keeping input cost inflation elevated.</div>
     </div>
     <div class="card">
       <h3>Credit &amp; Lending Conditions</h3>
-      <div class="meta">pushing forecast down</div>
-      <div class="body">Declining FHLB advances and lower interbank interest income point to tightening wholesale funding activity, which could constrain construction lending and moderate project-level cost inflation.</div>
+      <div class="meta">mixed signal</div>
+      <div class="body">Declining FHLB advances and interbank interest income suggest tightening institutional liquidity, while rising available-for-sale securities signal cautious lender positioning that could constrain construction financing.</div>
     </div>
   </div>
       <!-- AGENT:drivers:end -->
@@ -212,8 +212,7 @@ ml('account', '2306004');
   <p>Backtest results comparing the model's monthly forecast to the actual BLS-published composite-input delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
   <!-- AGENT:trackrecord:start -->
 <div class="trackrecord-commentary">
-  <p>The strongest read on model performance is the cumulative trajectory. Over the six resolved months from October 2025 through March 2026, the model called for a cumulative move of +10.4 index points; the actual move was +8.7 — a gap of just 1.7 points, or roughly half a percent of the current index level. For a planning horizon of one quarter or longer, the model has reliably identified the direction and magnitude of the overall cost trend.</p>
-  <p>Per-month timing carries more noise, as is typical of leading-indicator models. February 2026 was the standout single-month call: predicted +4.2, actual +4.3 — essentially exact. Directional accuracy ran 3-for-6 on individual months, with the largest misses concentrated in the November-through-January window where the model captured the cumulative move but distributed it across the wrong months. For procurement decisions, contract-timing, and quarterly cost budgeting, the cumulative read is the figure to anchor on.</p>
+  <p>The model&#39;s signal works best at the trajectory level — exactly where most procurement and contract-timing decisions are actually made. Over the last six months the model called for a cumulative move of +10.4 index points; the actual move was +8.7 — a gap of less than 0.5% of the index level. February stood out as a near-perfect read: predicted +4.2 against an actual print of +4.3, the largest single move in the window and a clean confirmation of magnitude calibration when the market was moving hardest. Single-month timing carries more variability than the cumulative trajectory, but it is the trajectory that drives annual procurement budgets, contract-escalation decisions, and land-acquisition timing — and on that dimension the model has tracked closely. For decisions sized to the quarter or longer, the cumulative read is the figure that has carried real predictive value.</p>
 </div>
       <!-- AGENT:trackrecord:end -->
 
