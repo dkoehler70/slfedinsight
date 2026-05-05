@@ -88,22 +88,22 @@ ml('account', '2306004');
     <div class="card">
       <h3>Reinsurance</h3>
       <div class="meta">CRO / CFO</div>
-      <div class="body">With business insurance premium prices forecast to rise roughly 0.3% month-over-month by June, the pricing environment remains modestly favorable, so hold existing reinsurance treaty terms rather than seeking early renewal concessions; the roughly $1.6 million in incremental premium on a $500 million book does not justify renegotiating attachment points at this time.</div>
+      <div class="body">With business insurance premiums forecast to rise roughly 0.31% month-over-month by June, renew or extend reinsurance treaties at current rates before that increase is priced into counterparty quotes, locking in coverage on approximately $500M in premium exposure ahead of the upward move.</div>
     </div>
     <div class="card">
       <h3>Rate Locks</h3>
       <div class="meta">CFO / Treasury</div>
-      <div class="body">The forecast signals a slow, steady upward drift in premium prices rather than a sharp move, so Treasury should avoid locking in current rates aggressively; maintain existing hedging positions and reassess if the acceleration continues beyond June, as the expected gain of approximately $1.6 million on the book is too modest to warrant new fixed-rate commitments.</div>
+      <div class="body">Treasury should secure fixed-rate financing or lock borrowing costs on any near-term capital needs now, as the steady premium price acceleration signals a firming market that could modestly lift short-term funding costs over the next 60 days; the gain is modest at roughly $1.6M on a $500M book, so limit hedging costs to well under that threshold.</div>
     </div>
     <div class="card">
       <h3>Reserves</h3>
       <div class="meta">CFO / Chief Actuary</div>
-      <div class="body">A sustained, incremental rise in premium prices of around 0.3% MoM suggests claims cost inflation may be edging upward in tandem; the Chief Actuary should apply a modest upward margin of roughly 0.3% to near-term loss development assumptions on new business written in this period, without broad reserve strengthening across the entire book.</div>
+      <div class="body">The forecast points to continued, gradual premium strengthening of about 0.31% MoM, suggesting loss-cost trends remain stable rather than spiking; the Chief Actuary should hold current reserve adequacy levels and flag for a modest upward reserve review only if two or more consecutive months confirm acceleration beyond this pace.</div>
     </div>
     <div class="card">
       <h3>Capital Allocation</h3>
       <div class="meta">CEO / CFO</div>
-      <div class="body">The steady, low-single-digit premium price increase forecast for June supports a stable underwriting environment, so capital allocation should remain largely unchanged; consider selectively deploying an incremental 1-2% of underwriting capacity into lines showing the strongest price momentum, consistent with the roughly $1.6 million in projected additional premium on the existing book.</div>
+      <div class="body">A 0.31% MoM premium price increase translates to roughly $1.6M in incremental revenue on the existing book, a moderate tailwind that supports maintaining current capital deployment levels; redirect that incremental margin toward underwriting capacity in lines showing the strongest rate momentum rather than broad expansion.</div>
     </div>
   </div>
       <!-- AGENT:recs:end -->
@@ -113,29 +113,29 @@ ml('account', '2306004');
   <!-- AGENT:drivers:start -->
 <div class="card-grid">
     <div class="card">
-      <h3>Interest rates rising</h3>
+      <h3>Interest rates</h3>
       <div class="meta">pushing forecast up</div>
-      <div class="body">Short- and medium-term Treasury yields are elevated, signaling tighter financial conditions that historically correlate with higher business insurance premiums.</div>
+      <div class="body">Rising short- and medium-term Treasury yields signal tighter financial conditions, which historically correlate with higher business insurance premium pricing.</div>
     </div>
     <div class="card">
-      <h3>Consumer prices mixed</h3>
-      <div class="meta">mixed signal</div>
-      <div class="body">Retail food and household goods prices are broadly rising, increasing replacement and claims costs, while meat and poultry prices remain relatively flat.</div>
-    </div>
-    <div class="card">
-      <h3>Wholesale labor costs</h3>
+      <h3>Consumer prices</h3>
       <div class="meta">pushing forecast up</div>
-      <div class="body">Rising hourly earnings in wholesale trade are pushing up business operating costs, which tend to flow through into higher insured values and premium levels.</div>
+      <div class="body">Broad consumer price increases across food and household goods reflect persistent inflation, driving up insured replacement costs and claims severity.</div>
     </div>
     <div class="card">
       <h3>Household balance sheets</h3>
       <div class="meta">pushing forecast down</div>
-      <div class="body">Wealth concentration in bonds and loans among the ultra-wealthy is declining, alongside softer middle-class business equity, suggesting reduced commercial exposure and moderating premium demand.</div>
+      <div class="body">Wealth concentration shifts and declining loan assets among upper-income households suggest reduced economic activity at the top, moderating some upward pricing pressure.</div>
     </div>
     <div class="card">
-      <h3>Banking liquidity tightening</h3>
+      <h3>Banking liquidity</h3>
       <div class="meta">pushing forecast down</div>
-      <div class="body">Shrinking non-interest-bearing bank deposits signal tighter credit conditions, which can compress business investment and dampen demand for commercial insurance coverage.</div>
+      <div class="body">Declining non-interest-bearing bank deposits indicate tightening liquidity conditions, which can compress commercial credit availability and temper insurance demand.</div>
+    </div>
+    <div class="card">
+      <h3>Labor and wages</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Rising hourly earnings in wholesale trade point to higher payroll exposures and loss costs, supporting upward pressure on workers&#39; compensation and liability premiums.</div>
     </div>
   </div>
       <!-- AGENT:drivers:end -->
@@ -210,6 +210,11 @@ ml('account', '2306004');
 
   <h2 class="section-title" id="past-performance">Past Performance</h2>
   <p>Backtest results comparing the model's monthly forecast to the actual BLS-published Insurance PPI delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
+  <!-- AGENT:trackrecord:start -->
+<div class="trackrecord-commentary">
+  <p>Over the eight most recently resolved months, this forecast called the direction of premium movement correctly every single time — eight for eight. The cumulative predicted move tracked within less than one percentage point of the cumulative actual move across that entire window, meaning the overall trajectory has been captured with strong fidelity even when individual month timing varies. The mean absolute error across those months has been approximately 0.155% of the current price level — a tight band for a 60-day forward view. That consistency is the foundation on which June&#39;s call rests.</p>
+</div>
+      <!-- AGENT:trackrecord:end -->
 
   <table class="data">
     <thead>
