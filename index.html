@@ -71,12 +71,12 @@ ml('account', '2306004');
   <!-- AGENT:forecast:start -->
 <div class="forecast-headline">
     <div>
-      <div class="number">+0.393%</div>
+      <div class="number">+0.312%</div>
       <div class="label">Predicted MoM change in U.S. business insurance premium prices for Jun 2026</div>
     </div>
     <div class="body">
-      <p>The model forecasts U.S. business insurance premium prices will change <strong>+0.393%</strong> month-over-month in <strong>Jun 2026</strong>, relative to the most recently published BLS reading (Mar 2026).</p>
-      <p class="impact"><strong>Implied magnitude on a $500M premium book:</strong> ~<strong>+$1,965,639</strong>. Of similar order of magnitude across reinsurance, rate locks, reserves, capital allocation.</p>
+      <p>The model forecasts U.S. business insurance premium prices will change <strong>+0.312%</strong> month-over-month in <strong>Jun 2026</strong>, relative to the most recently published BLS reading (Mar 2026).</p>
+      <p class="impact"><strong>Implied magnitude on a $500M premium book:</strong> ~<strong>+$1,561,797</strong>. Of similar order of magnitude across reinsurance, rate locks, reserves, capital allocation.</p>
     </div>
   </div>
       <!-- AGENT:forecast:end -->
@@ -88,22 +88,22 @@ ml('account', '2306004');
     <div class="card">
       <h3>Reinsurance</h3>
       <div class="meta">CRO / CFO</div>
-      <div class="body">Lock in reinsurance renewals now; the forecast signals accelerating premium inflation at +0.39% MoM, which will compress margins on existing placements. Secure 12-month terms before June to avoid 40-50 basis points of additional cost on your renewal tower.</div>
+      <div class="body">With business insurance premium prices forecast to rise roughly 0.3% month-over-month by June, the pricing environment remains modestly favorable, so hold existing reinsurance treaty terms rather than seeking early renewal concessions; the roughly $1.6 million in incremental premium on a $500 million book does not justify renegotiating attachment points at this time.</div>
     </div>
     <div class="card">
       <h3>Rate Locks</h3>
       <div class="meta">CFO / Treasury</div>
-      <div class="body">Execute forward rate locks on 60% of anticipated June premium volume. At +0.39% MoM, a $500M book faces ~$1.95M in margin headwind; locking rates protects underwriting spread and reduces June earnings volatility.</div>
+      <div class="body">The forecast signals a slow, steady upward drift in premium prices rather than a sharp move, so Treasury should avoid locking in current rates aggressively; maintain existing hedging positions and reassess if the acceleration continues beyond June, as the expected gain of approximately $1.6 million on the book is too modest to warrant new fixed-rate commitments.</div>
     </div>
     <div class="card">
       <h3>Reserves</h3>
       <div class="meta">CFO / Chief Actuary</div>
-      <div class="body">Increase loss reserves by 0.4-0.5% to reflect the rising premium environment and associated claims cost inflation. The sustained upward trajectory suggests loss trends are tightening; front-load reserve adequacy to avoid adverse development in Q3.</div>
+      <div class="body">A sustained, incremental rise in premium prices of around 0.3% MoM suggests claims cost inflation may be edging upward in tandem; the Chief Actuary should apply a modest upward margin of roughly 0.3% to near-term loss development assumptions on new business written in this period, without broad reserve strengthening across the entire book.</div>
     </div>
     <div class="card">
       <h3>Capital Allocation</h3>
       <div class="meta">CEO / CFO</div>
-      <div class="body">Redirect 15-20% of planned share buybacks into capital retention; rising premiums typically signal hardening market conditions and elevated loss volatility. Preserve dry powder for opportunistic M&amp;A or dividend support if competitive pressure intensifies.</div>
+      <div class="body">The steady, low-single-digit premium price increase forecast for June supports a stable underwriting environment, so capital allocation should remain largely unchanged; consider selectively deploying an incremental 1-2% of underwriting capacity into lines showing the strongest price momentum, consistent with the roughly $1.6 million in projected additional premium on the existing book.</div>
     </div>
   </div>
       <!-- AGENT:recs:end -->
@@ -115,22 +115,27 @@ ml('account', '2306004');
     <div class="card">
       <h3>Interest rates rising</h3>
       <div class="meta">pushing forecast up</div>
-      <div class="body">Short and medium-term Treasury yields are climbing, increasing insurers&#39; cost of capital and reducing discount rates on future liabilities.</div>
+      <div class="body">Short- and medium-term Treasury yields are elevated, signaling tighter financial conditions that historically correlate with higher business insurance premiums.</div>
     </div>
     <div class="card">
-      <h3>Consumer price pressures</h3>
+      <h3>Consumer prices mixed</h3>
+      <div class="meta">mixed signal</div>
+      <div class="body">Retail food and household goods prices are broadly rising, increasing replacement and claims costs, while meat and poultry prices remain relatively flat.</div>
+    </div>
+    <div class="card">
+      <h3>Wholesale labor costs</h3>
       <div class="meta">pushing forecast up</div>
-      <div class="body">Food, beverage, and pet-related prices are accelerating, signaling broader inflation in household consumption that drives claim costs upward.</div>
+      <div class="body">Rising hourly earnings in wholesale trade are pushing up business operating costs, which tend to flow through into higher insured values and premium levels.</div>
     </div>
     <div class="card">
-      <h3>Wealth concentration declining</h3>
+      <h3>Household balance sheets</h3>
       <div class="meta">pushing forecast down</div>
-      <div class="body">Top earners are reducing holdings in bonds and loans while middle-class equity stakes weaken, suggesting lower investment income and reduced risk appetite among affluent segments.</div>
+      <div class="body">Wealth concentration in bonds and loans among the ultra-wealthy is declining, alongside softer middle-class business equity, suggesting reduced commercial exposure and moderating premium demand.</div>
     </div>
     <div class="card">
-      <h3>Import costs easing</h3>
+      <h3>Banking liquidity tightening</h3>
       <div class="meta">pushing forecast down</div>
-      <div class="body">Electrical and wiring component import prices are falling, moderating input costs for manufacturers and reducing exposure to supply-chain inflation.</div>
+      <div class="body">Shrinking non-interest-bearing bank deposits signal tighter credit conditions, which can compress business investment and dampen demand for commercial insurance coverage.</div>
     </div>
   </div>
       <!-- AGENT:drivers:end -->
@@ -141,7 +146,7 @@ ml('account', '2306004');
     <canvas id="historyChart"></canvas>
   </div>
   <!-- AGENT:chart:start -->
-<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-04","level":145.249},{"date":"2025-05","level":145.397},{"date":"2025-06","level":145.658},{"date":"2025-07","level":145.93},{"date":"2025-08","level":146.338},{"date":"2025-09","level":147.405},{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.826},{"date":"2026-01","level":149.563},{"date":"2026-02","level":149.636},{"date":"2026-03","level":149.998}],"predictions":[{"date":"2025-08","level":146.32564853596642,"actualKnown":true},{"date":"2025-09","level":147.00020155162,"actualKnown":true},{"date":"2025-10","level":147.64128123640202,"actualKnown":true},{"date":"2025-11","level":147.48703141727515,"actualKnown":true},{"date":"2025-12","level":148.10117499911263,"actualKnown":true},{"date":"2026-01","level":148.79391182444428,"actualKnown":true},{"date":"2026-02","level":149.7426118089868,"actualKnown":true},{"date":"2026-03","level":149.88924385264403,"actualKnown":true},{"date":"2026-04","level":150.214649764137,"actualKnown":true},{"date":"2026-05","level":150.56051572975255,"actualKnown":false},{"date":"2026-06","level":151.15019965697152,"actualKnown":false}]}</script>
+<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-04","level":145.249},{"date":"2025-05","level":145.397},{"date":"2025-06","level":145.658},{"date":"2025-07","level":145.93},{"date":"2025-08","level":146.338},{"date":"2025-09","level":147.405},{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.826},{"date":"2026-01","level":149.563},{"date":"2026-02","level":149.636},{"date":"2026-03","level":149.998}],"predictions":[{"date":"2025-08","level":146.62893199677617,"actualKnown":true},{"date":"2025-09","level":147.50982797783567,"actualKnown":true},{"date":"2025-10","level":147.75109002175043,"actualKnown":true},{"date":"2025-11","level":147.5263701303479,"actualKnown":true},{"date":"2025-12","level":148.11687777084794,"actualKnown":true},{"date":"2026-01","level":149.29672627957024,"actualKnown":true},{"date":"2026-02","level":149.81999877130525,"actualKnown":true},{"date":"2026-03","level":150.33741783341728,"actualKnown":true},{"date":"2026-04","level":150.1539363685858,"actualKnown":true},{"date":"2026-05","level":150.48174851341682,"actualKnown":false},{"date":"2026-06","level":150.95028130738197,"actualKnown":false}]}</script>
       <!-- AGENT:chart:end -->
   <script>
   (function() {
@@ -222,7 +227,7 @@ ml('account', '2306004');
 <tr>
         <td>Jun 2026</td>
         <td>60d</td>
-        <td class="num">+0.590</td>
+        <td class="num">+0.469</td>
         <td class="num"><em>pending</em></td>
         <td class="num"><em>pending</em></td>
         <td>BLS release pending</td>
@@ -230,7 +235,7 @@ ml('account', '2306004');
       <tr>
         <td>May 2026</td>
         <td>60d</td>
-        <td class="num">+0.346</td>
+        <td class="num">+0.328</td>
         <td class="num"><em>pending</em></td>
         <td class="num"><em>pending</em></td>
         <td>BLS release pending</td>
@@ -238,7 +243,7 @@ ml('account', '2306004');
       <tr>
         <td>Apr 2026</td>
         <td>60d</td>
-        <td class="num">+0.217</td>
+        <td class="num">+0.156</td>
         <td class="num"><em>pending</em></td>
         <td class="num"><em>pending</em></td>
         <td>BLS release pending</td>
@@ -246,73 +251,73 @@ ml('account', '2306004');
       <tr>
         <td>Mar 2026</td>
         <td>60d</td>
-        <td class="num">+0.253</td>
+        <td class="num">+0.701</td>
         <td class="num">+0.362</td>
-        <td class="num">-0.109</td>
+        <td class="num">+0.339</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Feb 2026</td>
         <td>60d</td>
-        <td class="num">+0.180</td>
+        <td class="num">+0.257</td>
         <td class="num">+0.073</td>
-        <td class="num">+0.107</td>
+        <td class="num">+0.184</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Jan 2026</td>
         <td>60d</td>
-        <td class="num">+0.968</td>
+        <td class="num">+1.471</td>
         <td class="num">+1.737</td>
-        <td class="num">-0.769</td>
+        <td class="num">-0.266</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Dec 2025</td>
         <td>60d</td>
-        <td class="num">+0.521</td>
+        <td class="num">+0.537</td>
         <td class="num">+0.246</td>
-        <td class="num">+0.275</td>
+        <td class="num">+0.291</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Nov 2025</td>
         <td>60d</td>
-        <td class="num">+0.065</td>
+        <td class="num">+0.104</td>
         <td class="num">+0.158</td>
-        <td class="num">-0.093</td>
+        <td class="num">-0.054</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Oct 2025</td>
         <td>60d</td>
-        <td class="num">+0.236</td>
+        <td class="num">+0.346</td>
         <td class="num">+0.017</td>
-        <td class="num">+0.219</td>
+        <td class="num">+0.329</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Sep 2025</td>
         <td>60d</td>
-        <td class="num">+0.662</td>
+        <td class="num">+1.172</td>
         <td class="num">+1.067</td>
-        <td class="num">-0.405</td>
+        <td class="num">+0.105</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr>
         <td>Aug 2025</td>
         <td>60d</td>
-        <td class="num">+0.396</td>
+        <td class="num">+0.699</td>
         <td class="num">+0.408</td>
-        <td class="num">-0.012</td>
+        <td class="num">+0.291</td>
         <td>Seasonally-adjusted (5y trailing)</td>
       </tr>
       <tr style="font-weight:600; background:#f5f7fa; border-top:2px solid var(--navy);">
         <td>Cumulative (8 resolved months)</td>
         <td>—</td>
-        <td class="num">+3.281</td>
+        <td class="num">+5.287</td>
         <td class="num">+4.068</td>
-        <td class="num">-0.787</td>
+        <td class="num">+1.219</td>
         <td>Trajectory captured; per-month timing carries the noise</td>
       </tr>
       <!-- AGENT:past:end -->
