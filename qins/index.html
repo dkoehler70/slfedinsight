@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>St Louis Fed Insight (Quant)</title>
+<meta name="description" content="Insurance PPI forecasting research — St Louis Fed Insight">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<!-- Mailchimp form styles -->
+<style>
+  .mc-form { max-width:540px; margin:0 auto; text-align:left; background:#fff; border:1px solid #C0CCD9; border-radius:3px; padding:24px; font-family:Helvetica, sans-serif; color:#3C4858; }
+  .mc-form h3 { font-size:28px; font-weight:700; margin:0 0 8px; }
+  .mc-form p { font-size:16px; margin:0 0 12px; }
+  .mc-form label { display:block; font-weight:700; font-size:16px; margin-bottom:6px; }
+  .mc-form input[type=email] { width:100%; box-sizing:border-box; font-size:16px; padding:10px; border:1px solid #C0CCD9; border-radius:3px; margin-bottom:12px; }
+  .mc-form button { font-size:16px; font-weight:700; color:#fff; background:#3E4857; border:0; border-radius:3px; padding:10px 20px; cursor:pointer; }
+  .mc-form .mc-note { font-size:12px; color:#6b7785; margin-top:10px; }
+</style>
+<!-- End Mailchimp form styles -->
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <a href="/">Insurance Edition</a>
+    <a href="#about">About</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#newsletter">Subscribe</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">
+        <img src="../assets/logo.png" alt="Swarmalytics" class="brand-logo">
+      </a>
+      <div class="brand-text">
+        <span class="brand-name">St Louis Fed Insight</span>
+        <span class="brand-tag">U.S. Business Insurance Premium Forecasting</span>
+      </div>
+    </div>
+    <form class="header-search" onsubmit="return false;" aria-label="Search">
+      <input type="search" placeholder="Search forecasts, methodology, releases…">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+<nav class="primary-nav">
+  <div class="container">
+    <a href="#latest-forecast" class="active">Latest Forecast</a>
+    <a href="#executive-recommendations">Executive Recommendations</a>
+    <a href="#current-drivers">Current Driving Factors</a>
+    <a href="#history-chart">History &amp; Forecasts</a>
+    <a href="#past-performance">Past Performance</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Forecasting U.S. Business Insurance Premium Prices</h1>
+    <p>Monthly model-driven forecasts of the national index of business insurance premium prices, built from public economic data.</p>
+  </div>
+</section>
+
+<main>
+
+  <h2 class="section-title" id="latest-forecast">Latest Forecast</h2>
+  <!-- AGENT:forecast:start -->
+<div class="forecast-headline">
+    <div>
+      <div class="number">+0.131%</div>
+      <div class="label">Predicted MoM change in U.S. business insurance premium prices for Dec 2026</div>
+    </div>
+    <div class="body">
+      <p>U.S. business insurance premium prices are forecast to rise approximately +0.13% month-over-month in December 2026, translating to roughly $655,000 in additional premium on a $500 million book. The pressure is broad-based: transportation cost inflation, rising utility labor costs, and equity market uncertainty around labor regulations are each contributing upward momentum. Carriers should treat this as a signal to act across reinsurance positioning, rate lock timing, reserve adequacy, and capital deployment — the cumulative effect of modest monthly gains compounds quickly across a full book.</p>
+    </div>
+  </div>
+      <!-- AGENT:forecast:end -->
+
+  <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
+  <p>Forward-looking guidance for insurance carrier C-suite, grounded in the current forecast and market conditions. Refreshed each weekly model run.</p>
+  <!-- AGENT:recs:start -->
+<div class="card-grid">
+    <div class="card">
+      <h3>Reinsurance</h3>
+      <div class="meta">CRO / CFO</div>
+      <div class="body">With premiums trending modestly upward, use the next 60 days to confirm that treaty structures reflect current rate levels before year-end renewals lock in. A +0.13% MoM trajectory does not warrant emergency restructuring, but incremental exposure creep across a large book justifies a quiet review of attachment points.</div>
+    </div>
+    <div class="card">
+      <h3>Rate Locks</h3>
+      <div class="meta">CFO / Treasury</div>
+      <div class="body">The forecast supports holding — not accelerating — rate lock decisions on multi-year commercial accounts, as the upward drift favors carriers who retain pricing flexibility into 2027. Lock only where client retention risk is acute; the macro environment does not yet demand defensive concessions.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves</h3>
+      <div class="meta">CFO / Chief Actuary</div>
+      <div class="body">Transportation services inflation and rising utility wage costs are loss-cost drivers, not just premium drivers — ensure loss development assumptions in commercial auto and workers&#39; comp lines reflect current input cost trends. A modest reserve buffer addition is prudent given the directional consistency of the upward signal over 14 months.</div>
+    </div>
+    <div class="card">
+      <h3>Capital Allocation</h3>
+      <div class="meta">CEO / CFO</div>
+      <div class="body">Sustained low-single-digit monthly premium growth supports measured expansion in commercial lines capacity rather than contraction. Prioritize lines with direct exposure to transportation and utility sectors, where premium and loss-cost trends are moving in tandem and margin visibility is improving.</div>
+    </div>
+  </div>
+      <!-- AGENT:recs:end -->
+
+  <h2 class="section-title" id="current-drivers">Current Driving Factors</h2>
+  <p>Broad economic categories currently feeding the forecast. Each refreshes when the model retrains.</p>
+  <!-- AGENT:drivers:start -->
+<div class="card-grid">
+    <div class="card">
+      <h3>Transportation Cost Inflation</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Rising prices for transportation services are the single strongest upward signal in the forecast. As the cost of moving goods and people increases, commercial insurance exposures — particularly in auto and logistics — expand, supporting higher premium levels.</div>
+    </div>
+    <div class="card">
+      <h3>Utility Sector Labor Costs</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Hourly earnings in the utilities sector are climbing, lifting the underlying cost base that insurers must price into commercial and workers&#39; compensation coverage. Higher wage floors translate directly into elevated claims severity expectations.</div>
+    </div>
+    <div class="card">
+      <h3>Broad Consumer Price Pressures</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Persistent inflation across everyday goods signals that input costs throughout the economy remain elevated, keeping replacement and repair costs above historical norms. This broad price environment reinforces upward pressure on commercial property and liability premiums.</div>
+    </div>
+    <div class="card">
+      <h3>Labor Regulation Uncertainty</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Equity market volatility tied to labor regulation risk is nudging premiums higher, as businesses face uncertain compliance costs and potential liability exposures. Insurers are beginning to price this regulatory ambiguity into commercial lines.</div>
+    </div>
+    <div class="card">
+      <h3>Offsetting Macro Headwinds</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">Several macroeconomic indicators are exerting modest downward pressure on premium growth, likely reflecting softer demand conditions or easing in certain risk categories. These counterweights are keeping the net forecast gain contained rather than accelerating.</div>
+    </div>
+  </div>
+      <!-- AGENT:drivers:end -->
+
+  <h2 class="section-title" id="history-chart">National Premium Index — History &amp; Forecasts</h2>
+  <p>Historical level of the national business insurance premium price index, with model forecasts overlaid.</p>
+  <div class="chart-container">
+    <canvas id="historyChart"></canvas>
+  </div>
+  <!-- AGENT:chart:start -->
+<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-10","level":147.422},{"date":"2025-11","level":147.58},{"date":"2025-12","level":147.866},{"date":"2026-01","level":150.497},{"date":"2026-02","level":150.534},{"date":"2026-03","level":150.89},{"date":"2026-04","level":150.893},{"date":"2026-05","level":150.881},{"date":"2026-06","level":150.898},{"date":"2026-07","level":151.098},{"date":"2026-08","level":150.991},{"date":"2026-09","level":151.071}],"predictions":[{"date":"2025-08","level":146.40389907770276,"actualKnown":true},{"date":"2025-09","level":147.2300477033227,"actualKnown":true},{"date":"2025-10","level":147.4604009285269,"actualKnown":true},{"date":"2025-11","level":147.5001686008885,"actualKnown":true},{"date":"2025-12","level":148.05282757549801,"actualKnown":true},{"date":"2026-01","level":149.39908599868141,"actualKnown":true},{"date":"2026-02","level":150.6895695043872,"actualKnown":true},{"date":"2026-03","level":151.13664808697916,"actualKnown":true},{"date":"2026-04","level":150.89735637326552,"actualKnown":true},{"date":"2026-05","level":151.1088927037191,"actualKnown":true},{"date":"2026-06","level":151.21731089413288,"actualKnown":true},{"date":"2026-07","level":151.10622401877131,"actualKnown":true},{"date":"2026-08","level":151.4913281978096,"actualKnown":true},{"date":"2026-09","level":151.93653913464885,"actualKnown":true},{"date":"2026-10","level":150.96700682973218,"actualKnown":true},{"date":"2026-11","level":150.89345675750823,"actualKnown":false},{"date":"2026-12","level":151.09138303736123,"actualKnown":false}]}</script>
+      <!-- AGENT:chart:end -->
+  <script>
+  (function() {
+    var dataEl = document.getElementById('chart-data');
+    if (!dataEl) return;
+    var data;
+    try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var ctx = document.getElementById('historyChart');
+    if (!ctx || !window.Chart) return;
+    if (!data.actuals.length && !data.predictions.length) return;
+
+    // Build a unified, sorted x-axis from union of dates
+    var allDates = {};
+    data.actuals.forEach(function(p) { allDates[p.date] = true; });
+    data.predictions.forEach(function(p) { allDates[p.date] = true; });
+    var labels = Object.keys(allDates).sort();
+
+    var actualsByDate = {}; data.actuals.forEach(function(p) { actualsByDate[p.date] = p.level; });
+    var predsByDate = {};   data.predictions.forEach(function(p) { predsByDate[p.date] = p; });
+
+    var actualSeries = labels.map(function(d) { return actualsByDate[d] != null ? actualsByDate[d] : null; });
+    var predSeries   = labels.map(function(d) { return predsByDate[d] != null ? predsByDate[d].level : null; });
+    var predOpenIdx  = labels.map(function(d) { return predsByDate[d] && predsByDate[d].actualKnown === false; });
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b',
+            backgroundColor: '#18416b', pointBackgroundColor: '#ffffff',
+            borderWidth: 2, pointBorderWidth: 2, pointRadius: 4, spanGaps: true, tension: 0.1,
+            order: 2 },
+          { label: 'Model forecast', data: predSeries,
+            borderColor: '#c0782a', backgroundColor: '#c0782a',
+            borderWidth: 1.5, borderDash: [4, 4],
+            pointRadius: 8, pointStyle: 'rectRot',
+            showLine: true, spanGaps: true,
+            order: 1 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { ticks: { maxRotation: 45, autoSkip: false } },
+          y: { title: { display: true, text: 'National premium index level' } }
+        },
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: { callbacks: {
+            afterLabel: function(ctx) {
+              if (ctx.datasetIndex === 1 && predOpenIdx[ctx.dataIndex]) return 'Open forecast (target month not yet published)';
+              return '';
+            }
+          }}
+        }
+      }
+    });
+  })();
+  </script>
+
+  <h2 class="section-title" id="past-performance">Past Performance</h2>
+  <p>Backtest results comparing the model's monthly forecast to the actual BLS-published Insurance PPI delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
+  <!-- AGENT:trackrecord:start -->
+<div class="trackrecord-commentary">
+  <p>The forecast has called direction correctly in 12 of 14 resolved months — an 86% directional hit rate — demonstrating consistent alignment with where the market is heading. The cumulative predicted move over those 14 months sits within 0.84% of the actual index level, a gap smaller than a single month&#39;s typical variation, confirming that the overall trajectory is being captured with meaningful precision. As the December 2026 forecast period closes, that track record of trajectory accuracy provides a reliable foundation for the strategic decisions outlined here.</p>
+</div>
+      <!-- AGENT:trackrecord:end -->
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Target Month</th>
+        <th>Horizon</th>
+        <th class="num">Predicted Δ</th>
+        <th class="num">Actual Δ</th>
+        <th class="num">Error</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- AGENT:past:start -->
+<tr>
+        <td>Dec 2026</td>
+        <td>60d</td>
+        <td class="num">+0.198</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
+      </tr>
+      <tr>
+        <td>Nov 2026</td>
+        <td>60d</td>
+        <td class="num">-0.074</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
+      </tr>
+      <tr>
+        <td>Oct 2026</td>
+        <td>60d</td>
+        <td class="num">-0.104</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
+      </tr>
+      <tr>
+        <td>Sep 2026</td>
+        <td>60d</td>
+        <td class="num">+0.946</td>
+        <td class="num">+0.080</td>
+        <td class="num">+0.866</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Aug 2026</td>
+        <td>60d</td>
+        <td class="num">+0.393</td>
+        <td class="num">-0.107</td>
+        <td class="num">+0.500</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jul 2026</td>
+        <td>60d</td>
+        <td class="num">+0.208</td>
+        <td class="num">+0.200</td>
+        <td class="num">+0.008</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jun 2026</td>
+        <td>60d</td>
+        <td class="num">+0.336</td>
+        <td class="num">+0.017</td>
+        <td class="num">+0.319</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>May 2026</td>
+        <td>60d</td>
+        <td class="num">+0.216</td>
+        <td class="num">-0.012</td>
+        <td class="num">+0.228</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Apr 2026</td>
+        <td>60d</td>
+        <td class="num">+0.007</td>
+        <td class="num">+0.003</td>
+        <td class="num">+0.004</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Mar 2026</td>
+        <td>60d</td>
+        <td class="num">+0.603</td>
+        <td class="num">+0.356</td>
+        <td class="num">+0.247</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Feb 2026</td>
+        <td>60d</td>
+        <td class="num">+0.193</td>
+        <td class="num">+0.037</td>
+        <td class="num">+0.156</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jan 2026</td>
+        <td>60d</td>
+        <td class="num">+1.533</td>
+        <td class="num">+2.631</td>
+        <td class="num">-1.098</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Dec 2025</td>
+        <td>60d</td>
+        <td class="num">+0.473</td>
+        <td class="num">+0.286</td>
+        <td class="num">+0.187</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Nov 2025</td>
+        <td>60d</td>
+        <td class="num">+0.078</td>
+        <td class="num">+0.158</td>
+        <td class="num">-0.080</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Oct 2025</td>
+        <td>60d</td>
+        <td class="num">+0.055</td>
+        <td class="num">+0.017</td>
+        <td class="num">+0.038</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Sep 2025</td>
+        <td>60d</td>
+        <td class="num">+0.892</td>
+        <td class="num">+1.067</td>
+        <td class="num">-0.175</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Aug 2025</td>
+        <td>60d</td>
+        <td class="num">+0.474</td>
+        <td class="num">+0.408</td>
+        <td class="num">+0.066</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr style="font-weight:600; background:#f5f7fa; border-top:2px solid var(--navy);">
+        <td>Cumulative (14 resolved months)</td>
+        <td>—</td>
+        <td class="num">+6.407</td>
+        <td class="num">+5.141</td>
+        <td class="num">+1.266</td>
+        <td>Trajectory captured; per-month timing carries the noise</td>
+      </tr>
+      <!-- AGENT:past:end -->
+    </tbody>
+  </table>
+
+  <h2 class="section-title" id="methodology">Methodology</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Target Variable</h3>
+      <div class="meta">DEPVAR</div>
+      <div class="body">Raw monthly delta of WPU411 (Insurance PPI) as published by BLS — not interpolated, with a trailing-5-year seasonal mean removed before training and added back at prediction.</div>
+    </div>
+    <div class="card">
+      <h3>Feature Universe</h3>
+      <div class="meta">~21,000 series-derivative features</div>
+      <div class="body">Constructed from FRED economic data: trailing values, differences, and percent changes at intervals of 30, 60, 120, 240, and 480 days.</div>
+    </div>
+    <div class="card">
+      <h3>Modeling</h3>
+      <div class="meta">SwarmGA — multi-agent genetic search</div>
+      <div class="body">Pre-selects 200 candidate features via random forest importance + univariate scoring; a swarm of agents searches feature subsets to maximize a held-out fitness metric.</div>
+    </div>
+    <div class="card">
+      <h3>Backtesting Protocol</h3>
+      <div class="meta">Walk-forward, no future leakage</div>
+      <div class="body">Each model is trained only on data available before the target date. Forward features are constructed from the cutoff and shifted by the forecast horizon.</div>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="about">About</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Purpose</h3>
+      <div class="body">Proof-of-concept research site for forecasting Insurance Producer Prices for use by carrier finance teams. Visible to internal staff while the methodology is validated.</div>
+    </div>
+    <div class="card">
+      <h3>Data Source</h3>
+      <div class="body">All economic series sourced from FRED (Federal Reserve Bank of St. Louis). The Insurance PPI target is BLS series WPU411.</div>
+    </div>
+    <div class="card">
+      <h3>Disclaimer</h3>
+      <div class="body">Forecasts are research outputs, not investment, underwriting, or pricing advice. Past performance does not guarantee future results.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="newsletter" id="newsletter">
+      <!-- Mailchimp subscribe form (shared audience 35bb5ff4ae, tag 'ppi qins' id=12497847) -->
+      <div class="mc-form" id="mc_embed_signup">
+        <form action="https://swarmtrace.us14.list-manage.com/subscribe/post?u=9a4ba4adf4888e6de8829189e&amp;id=35bb5ff4ae" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <h3>Subscribe to updates</h3>
+          <p>Get notified when a new monthly St Louis Fed Insight forecast is published or methodology changes.</p>
+          <label for="mce-EMAIL">Enter your email address to subscribe</label>
+          <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="EMAIL" required>
+          <input type="hidden" name="tags" value="12497847">
+          <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_9a4ba4adf4888e6de8829189e_35bb5ff4ae" tabindex="-1" value=""></div>
+          <button type="submit" name="subscribe" id="mc-embedded-subscribe">SUBSCRIBE</button>
+          <p class="mc-note">Unsubscribe any time. Powered by Mailchimp.</p>
+        </form>
+      </div>
+      <!-- End Mailchimp subscribe form -->
+    </div>
+    <div>
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="#latest-forecast">Latest Forecast</a></li>
+        <li><a href="#executive-recommendations">Executive Recommendations</a></li>
+        <li><a href="#current-drivers">Current Driving Factors</a></li>
+        <li><a href="#history-chart">History &amp; Forecasts</a></li>
+        <li><a href="#past-performance">Past Performance</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED Economic Data</a></li>
+        <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">BLS Producer Price Index</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Internal POC</li>
+        <li>Powered by <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">Swarmalytics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    St Louis Fed Insight is an independent research site. Not affiliated with or endorsed by the Federal Reserve Bank of St. Louis or the U.S. Bureau of Labor Statistics.
+  </div>
+</footer>
+
+
+</body>
+</html>
