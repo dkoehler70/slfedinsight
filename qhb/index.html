@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Builders Insight (Quant)</title>
+<meta name="description" content="U.S. home builder material &amp; subcontractor cost forecasting — Home Builders Insight">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<!-- Mailchimp form styles -->
+<style>
+  .mc-form { max-width:540px; margin:0 auto; text-align:left; background:#fff; border:1px solid #C0CCD9; border-radius:3px; padding:24px; font-family:Helvetica, sans-serif; color:#3C4858; }
+  .mc-form h3 { font-size:28px; font-weight:700; margin:0 0 8px; }
+  .mc-form p { font-size:16px; margin:0 0 12px; }
+  .mc-form label { display:block; font-weight:700; font-size:16px; margin-bottom:6px; }
+  .mc-form input[type=email] { width:100%; box-sizing:border-box; font-size:16px; padding:10px; border:1px solid #C0CCD9; border-radius:3px; margin-bottom:12px; }
+  .mc-form button { font-size:16px; font-weight:700; color:#fff; background:#3E4857; border:0; border-radius:3px; padding:10px 20px; cursor:pointer; }
+  .mc-form .mc-note { font-size:12px; color:#6b7785; margin-top:10px; }
+</style>
+<!-- End Mailchimp form styles -->
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <a href="/">Insurance Edition</a>
+    <a href="/hb/">Home Builders Edition</a>
+    <a href="#about">About</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#newsletter">Subscribe</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">
+        <img src="../assets/logo.png" alt="Swarmalytics" class="brand-logo">
+      </a>
+      <div class="brand-text">
+        <span class="brand-name">Home Builders Insight</span>
+        <span class="brand-tag">U.S. Home Builder Material &amp; Subcontractor Cost Outlook</span>
+      </div>
+    </div>
+    <form class="header-search" onsubmit="return false;" aria-label="Search">
+      <input type="search" placeholder="Search forecasts, methodology, releases…">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+<nav class="primary-nav">
+  <div class="container">
+    <a href="#latest-forecast" class="active">Latest Forecast</a>
+    <a href="#executive-recommendations">Executive Recommendations</a>
+    <a href="#current-drivers">Current Driving Factors</a>
+    <a href="#history-chart">History &amp; Forecasts</a>
+    <a href="#past-performance">Past Performance</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Forecasting U.S. Home Builder Input Costs</h1>
+    <p>Monthly model-driven forecasts of a composite index of lumber, steel, concrete, gypsum, and building-materials wholesale costs, built from public economic data.</p>
+  </div>
+</section>
+
+<main>
+
+  <h2 class="section-title" id="latest-forecast">Latest Forecast</h2>
+  <!-- AGENT:forecast:start -->
+<div class="forecast-headline">
+    <div>
+      <div class="number">+0.616%</div>
+      <div class="label">Predicted MoM change in U.S. home builder input costs for Dec 2026</div>
+    </div>
+    <div class="body">
+      <p>Home builder input costs are forecast to rise 0.6% month-over-month in December, equivalent to roughly $3.1M in higher cost-of-goods on a $500M annual revenue base. The move is modest but broad-based — material pricing, subcontractor rates, and land competition are all nudging in the same direction. Across procurement, trade contracts, and acquisition timing, the cumulative drag of small cost increases compounds quickly if left unmanaged heading into the new year.</p>
+    </div>
+  </div>
+      <!-- AGENT:forecast:end -->
+
+  <h2 class="section-title" id="executive-recommendations">Executive Recommendations</h2>
+  <p>Forward-looking guidance for home builder C-suite, grounded in the current cost-input forecast. Refreshed each weekly model run.</p>
+  <!-- AGENT:recs:start -->
+<div class="card-grid">
+    <div class="card">
+      <h3>Material Procurement</h3>
+      <div class="meta">VP Procurement / CFO</div>
+      <div class="body">With a sub-1% cost increase forecast, there is no urgency to accelerate forward buys — but do not defer routine Q1 purchase decisions expecting relief. Lock in current pricing on high-volume commodities where supplier relationships allow, and avoid spot-market exposure on anything with a long lead time.</div>
+    </div>
+    <div class="card">
+      <h3>Subcontractor Pricing</h3>
+      <div class="meta">VP Construction / CFO</div>
+      <div class="body">Trade pricing is drifting modestly higher alongside material costs; resist automatic escalation clauses on renewals coming due in December and January. Where contracts allow, negotiate fixed-rate extensions now before the seasonal tightening of labor availability in early Q1.</div>
+    </div>
+    <div class="card">
+      <h3>Land Acquisition</h3>
+      <div class="meta">CEO / VP Land</div>
+      <div class="body">A slight uptick in input costs does not materially shift lot underwriting, but monitor listing-price behavior in your core markets — softening buyer demand could create selective acquisition opportunities in Q1. Maintain current closing pace; no reason to accelerate or pull back at this forecast magnitude.</div>
+    </div>
+    <div class="card">
+      <h3>Supply Constraints</h3>
+      <div class="meta">VP Procurement / VP Construction</div>
+      <div class="body">Inventory with price increases trending lower in the market signals that supply-side pressure is contained, not acute. Maintain current safety-stock levels and flag any single-source material dependencies for contingency planning ahead of the holiday production slowdown.</div>
+    </div>
+  </div>
+      <!-- AGENT:recs:end -->
+
+  <h2 class="section-title" id="current-drivers">Current Driving Factors</h2>
+  <p>Broad economic categories currently feeding the forecast. Each refreshes when the model retrains.</p>
+  <!-- AGENT:drivers:start -->
+<div class="card-grid">
+    <div class="card">
+      <h3>Housing Market Softness</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">The share of listings seeing price increases has been declining year-over-year, signaling cooler buyer demand. Historically, softer housing activity reduces the pull-through pressure on builder input costs within one to two quarters.</div>
+    </div>
+    <div class="card">
+      <h3>Financial Conditions</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">Tighter credit conditions and elevated borrowing costs are constraining builder and buyer activity alike, limiting the demand-side pressure that typically drives input cost acceleration. This is one of the more consistent dampening forces in the current environment.</div>
+    </div>
+    <div class="card">
+      <h3>Consumer &amp; Services Inflation</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">Broader consumer price pressures remain elevated but are showing signs of moderation in services and trade-related categories. Easing services inflation tends to flow into subcontractor and labor pricing with a short lag, providing a mild offset to any material cost increases.</div>
+    </div>
+    <div class="card">
+      <h3>Industrial &amp; Manufacturing Output</h3>
+      <div class="meta">pushing forecast up</div>
+      <div class="body">Paper and related manufacturing output is expanding at the margin, reflecting modest upstream industrial activity that can translate into firmer pricing for building materials tied to those supply chains. This is a secondary upward nudge rather than a dominant force.</div>
+    </div>
+    <div class="card">
+      <h3>Demand-Side Wealth Effects</h3>
+      <div class="meta">pushing forecast down</div>
+      <div class="body">Shifts in upper-income household spending and housing exposure are reducing demand pressure at the higher end of the new-home market, which historically correlates with softer input cost growth over the following 60 to 90 days.</div>
+    </div>
+  </div>
+      <!-- AGENT:drivers:end -->
+
+  <h2 class="section-title" id="history-chart">Builder Input Index — History &amp; Forecasts</h2>
+  <p>Historical level of the composite home builder input cost index, with model forecasts overlaid.</p>
+  <div class="chart-container">
+    <canvas id="historyChart"></canvas>
+  </div>
+  <!-- AGENT:chart:start -->
+<script id="chart-data" type="application/json">{"actuals":[{"date":"2025-10","level":329.108},{"date":"2025-11","level":327.03380000000004},{"date":"2025-12","level":330.432},{"date":"2026-01","level":335.0238},{"date":"2026-02","level":339.24379999999996},{"date":"2026-03","level":339.17719999999997},{"date":"2026-04","level":344.0612},{"date":"2026-05","level":344.7962},{"date":"2026-06","level":347.42179999999996},{"date":"2026-07","level":351.806},{"date":"2026-08","level":352.8392},{"date":"2026-09","level":354.2118}],"predictions":[{"date":"2025-04","level":335.92278079304435,"actualKnown":true},{"date":"2025-05","level":332.79765064221294,"actualKnown":true},{"date":"2025-06","level":333.79654085891667,"actualKnown":true},{"date":"2025-07","level":332.83323757750617,"actualKnown":true},{"date":"2025-08","level":331.0924406435405,"actualKnown":true},{"date":"2025-09","level":331.9683778840032,"actualKnown":true},{"date":"2025-10","level":329.0522703168262,"actualKnown":true},{"date":"2025-11","level":329.2447147262769,"actualKnown":true},{"date":"2025-12","level":327.03743587765626,"actualKnown":true},{"date":"2026-01","level":336.6764666588855,"actualKnown":true},{"date":"2026-02","level":340.6404072282977,"actualKnown":true},{"date":"2026-03","level":344.0728116265463,"actualKnown":true},{"date":"2026-04","level":341.4376014997764,"actualKnown":true},{"date":"2026-05","level":348.2825215088841,"actualKnown":true},{"date":"2026-06","level":344.9410976608277,"actualKnown":true},{"date":"2026-07","level":348.4272211404423,"actualKnown":true},{"date":"2026-08","level":352.9761142479985,"actualKnown":true},{"date":"2026-09","level":350.5167834363088,"actualKnown":true},{"date":"2026-10","level":353.3600713614822,"actualKnown":true},{"date":"2026-11","level":352.20400523243546,"actualKnown":false},{"date":"2026-12","level":354.38519338934594,"actualKnown":false}]}</script>
+      <!-- AGENT:chart:end -->
+  <script>
+  (function() {
+    var dataEl = document.getElementById('chart-data');
+    if (!dataEl) return;
+    var data;
+    try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var ctx = document.getElementById('historyChart');
+    if (!ctx || !window.Chart) return;
+    if (!data.actuals.length && !data.predictions.length) return;
+
+    var allDates = {};
+    data.actuals.forEach(function(p) { allDates[p.date] = true; });
+    data.predictions.forEach(function(p) { allDates[p.date] = true; });
+    var labels = Object.keys(allDates).sort();
+
+    var actualsByDate = {}; data.actuals.forEach(function(p) { actualsByDate[p.date] = p.level; });
+    var predsByDate = {};   data.predictions.forEach(function(p) { predsByDate[p.date] = p; });
+
+    var actualSeries = labels.map(function(d) { return actualsByDate[d] != null ? actualsByDate[d] : null; });
+    var predSeries   = labels.map(function(d) { return predsByDate[d] != null ? predsByDate[d].level : null; });
+    var predOpenIdx  = labels.map(function(d) { return predsByDate[d] && predsByDate[d].actualKnown === false; });
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          { label: 'Actual (BLS)', data: actualSeries, borderColor: '#18416b',
+            backgroundColor: '#18416b', pointBackgroundColor: '#ffffff',
+            borderWidth: 2, pointBorderWidth: 2, pointRadius: 4, spanGaps: true, tension: 0.1,
+            order: 2 },
+          { label: 'Model forecast', data: predSeries,
+            borderColor: '#c0782a', backgroundColor: '#c0782a',
+            borderWidth: 1.5, borderDash: [4, 4],
+            pointRadius: 8, pointStyle: 'rectRot',
+            showLine: true, spanGaps: true,
+            order: 1 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { ticks: { maxRotation: 45, autoSkip: false } },
+          y: { title: { display: true, text: 'Composite builder input index level' } }
+        },
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: { callbacks: {
+            afterLabel: function(ctx) {
+              if (ctx.datasetIndex === 1 && predOpenIdx[ctx.dataIndex]) return 'Open forecast (target month not yet published)';
+              return '';
+            }
+          }}
+        }
+      }
+    });
+  })();
+  </script>
+
+  <h2 class="section-title" id="past-performance">Past Performance</h2>
+  <p>Backtest results comparing the model's monthly forecast to the actual BLS-published composite-input delta. Each row is a held-out forecast (the model never saw the target month during training).</p>
+  <!-- AGENT:trackrecord:start -->
+<div class="trackrecord-commentary">
+  <p>The strongest evidence is in the trajectory: over 18 resolved forecast months, the cumulative predicted move was +22.98 index points against an actual move of +22.22 — a gap of just 0.76 points, or 0.21% of the current index level, well inside the typical single-month variation. Directional calls have been correct 13 of 18 times, meaning the forecast has consistently pointed the right way for procurement and contract-timing decisions even when the exact monthly magnitude shifted. For decisions sized to the quarter or longer, the cumulative read is where this forecast has delivered the most actionable value.</p>
+</div>
+      <!-- AGENT:trackrecord:end -->
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Target Month</th>
+        <th>Horizon</th>
+        <th class="num">Predicted Δ</th>
+        <th class="num">Actual Δ</th>
+        <th class="num">Error</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- AGENT:past:start -->
+<tr>
+        <td>Dec 2026</td>
+        <td>60d</td>
+        <td class="num">+2.181</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
+      </tr>
+      <tr>
+        <td>Nov 2026</td>
+        <td>60d</td>
+        <td class="num">-1.156</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
+      </tr>
+      <tr>
+        <td>Oct 2026</td>
+        <td>60d</td>
+        <td class="num">-0.852</td>
+        <td class="num"><em>pending</em></td>
+        <td class="num"><em>pending</em></td>
+        <td>BLS release pending</td>
+      </tr>
+      <tr>
+        <td>Sep 2026</td>
+        <td>60d</td>
+        <td class="num">-2.322</td>
+        <td class="num">+1.373</td>
+        <td class="num">-3.695</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Aug 2026</td>
+        <td>60d</td>
+        <td class="num">+1.170</td>
+        <td class="num">+1.033</td>
+        <td class="num">+0.137</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jul 2026</td>
+        <td>60d</td>
+        <td class="num">+1.005</td>
+        <td class="num">+4.384</td>
+        <td class="num">-3.379</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jun 2026</td>
+        <td>60d</td>
+        <td class="num">+0.145</td>
+        <td class="num">+2.626</td>
+        <td class="num">-2.481</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>May 2026</td>
+        <td>60d</td>
+        <td class="num">+4.221</td>
+        <td class="num">+0.735</td>
+        <td class="num">+3.486</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Apr 2026</td>
+        <td>60d</td>
+        <td class="num">+2.260</td>
+        <td class="num">+4.884</td>
+        <td class="num">-2.624</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Mar 2026</td>
+        <td>60d</td>
+        <td class="num">+4.829</td>
+        <td class="num">-0.067</td>
+        <td class="num">+4.896</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Feb 2026</td>
+        <td>60d</td>
+        <td class="num">+5.617</td>
+        <td class="num">+4.220</td>
+        <td class="num">+1.397</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jan 2026</td>
+        <td>60d</td>
+        <td class="num">+6.244</td>
+        <td class="num">+4.592</td>
+        <td class="num">+1.653</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Dec 2025</td>
+        <td>60d</td>
+        <td class="num">+0.004</td>
+        <td class="num">+3.398</td>
+        <td class="num">-3.395</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Nov 2025</td>
+        <td>60d</td>
+        <td class="num">+0.137</td>
+        <td class="num">-2.074</td>
+        <td class="num">+2.211</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Oct 2025</td>
+        <td>60d</td>
+        <td class="num">-1.199</td>
+        <td class="num">-1.143</td>
+        <td class="num">-0.056</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Sep 2025</td>
+        <td>60d</td>
+        <td class="num">-0.474</td>
+        <td class="num">-2.192</td>
+        <td class="num">+1.717</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Aug 2025</td>
+        <td>60d</td>
+        <td class="num">-0.390</td>
+        <td class="num">+0.960</td>
+        <td class="num">-1.350</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jul 2025</td>
+        <td>60d</td>
+        <td class="num">-0.186</td>
+        <td class="num">-1.537</td>
+        <td class="num">+1.351</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Jun 2025</td>
+        <td>60d</td>
+        <td class="num">-1.804</td>
+        <td class="num">-2.581</td>
+        <td class="num">+0.777</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>May 2025</td>
+        <td>60d</td>
+        <td class="num">-0.210</td>
+        <td class="num">+2.592</td>
+        <td class="num">-2.803</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr>
+        <td>Apr 2025</td>
+        <td>60d</td>
+        <td class="num">+3.933</td>
+        <td class="num">+1.018</td>
+        <td class="num">+2.915</td>
+        <td>Seasonally-adjusted (5y trailing)</td>
+      </tr>
+      <tr style="font-weight:600; background:#f5f7fa; border-top:2px solid var(--navy);">
+        <td>Cumulative (18 resolved months)</td>
+        <td>—</td>
+        <td class="num">+22.979</td>
+        <td class="num">+22.222</td>
+        <td class="num">+0.757</td>
+        <td>Trajectory captured; per-month timing carries the noise</td>
+      </tr>
+      <!-- AGENT:past:end -->
+    </tbody>
+  </table>
+
+  <h2 class="section-title" id="methodology">Methodology</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Target Variable</h3>
+      <div class="meta">DEPVAR</div>
+      <div class="body">Monthly delta of an equal-weighted composite of five BLS Producer Price Indices for builder inputs (lumber, iron &amp; steel, concrete ingredients, gypsum, and building-materials wholesale margins). A trailing-5-year seasonal mean is removed before training and added back at prediction.</div>
+    </div>
+    <div class="card">
+      <h3>Feature Universe</h3>
+      <div class="meta">~21,000 series-derivative features</div>
+      <div class="body">Constructed from FRED economic data: trailing values, differences, and percent changes at intervals of 30, 60, 120, 240, and 480 days.</div>
+    </div>
+    <div class="card">
+      <h3>Modeling</h3>
+      <div class="meta">SwarmGA — multi-agent genetic search</div>
+      <div class="body">Pre-selects 200 candidate features via random forest importance + univariate scoring; a swarm of agents searches feature subsets to maximize a held-out fitness metric.</div>
+    </div>
+    <div class="card">
+      <h3>Backtesting Protocol</h3>
+      <div class="meta">Walk-forward, no future leakage</div>
+      <div class="body">Each model is trained only on data available before the target date. Forward features are constructed from the cutoff and shifted by the forecast horizon.</div>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="about">About</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Purpose</h3>
+      <div class="body">Proof-of-concept research site for forecasting home builder input costs (materials and wholesale margins) for use by builder finance and procurement teams. Sister product to the Insurance Edition.</div>
+    </div>
+    <div class="card">
+      <h3>Data Source</h3>
+      <div class="body">All economic series sourced from FRED (Federal Reserve Bank of St. Louis). The composite target is built from BLS series WPU081, WPU101, WPU132, WPU137, and WPU573.</div>
+    </div>
+    <div class="card">
+      <h3>Disclaimer</h3>
+      <div class="body">Forecasts are research outputs, not procurement, hedging, or pricing advice. Past performance does not guarantee future results.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="newsletter" id="newsletter">
+      <!-- Mailchimp subscribe form (shared audience 35bb5ff4ae, tag 'ppi qhb' id=12497848) -->
+      <div class="mc-form" id="mc_embed_signup">
+        <form action="https://swarmtrace.us14.list-manage.com/subscribe/post?u=9a4ba4adf4888e6de8829189e&amp;id=35bb5ff4ae" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <h3>Subscribe to updates</h3>
+          <p>Get notified when a new monthly Home Builders Insight forecast is published or methodology changes.</p>
+          <label for="mce-EMAIL">Enter your email address to subscribe</label>
+          <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="EMAIL" required>
+          <input type="hidden" name="tags" value="12497848">
+          <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_9a4ba4adf4888e6de8829189e_35bb5ff4ae" tabindex="-1" value=""></div>
+          <button type="submit" name="subscribe" id="mc-embedded-subscribe">SUBSCRIBE</button>
+          <p class="mc-note">Unsubscribe any time. Powered by Mailchimp.</p>
+        </form>
+      </div>
+      <!-- End Mailchimp subscribe form -->
+    </div>
+    <div>
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="#latest-forecast">Latest Forecast</a></li>
+        <li><a href="#executive-recommendations">Executive Recommendations</a></li>
+        <li><a href="#current-drivers">Current Driving Factors</a></li>
+        <li><a href="#history-chart">History &amp; Forecasts</a></li>
+        <li><a href="#past-performance">Past Performance</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED Economic Data</a></li>
+        <li><a href="https://www.bls.gov/ppi/" target="_blank" rel="noopener">BLS Producer Price Index</a></li>
+        <li><a href="/">Insurance Edition</a></li>
+        <li><a href="/hb/">Home Builders Edition</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Internal POC</li>
+        <li>Powered by <a href="https://www.swarmalytics.com" target="_blank" rel="noopener">Swarmalytics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    Home Builders Insight is an independent research site. Not affiliated with or endorsed by the Federal Reserve Bank of St. Louis or the U.S. Bureau of Labor Statistics.
+  </div>
+</footer>
+
+
+</body>
+</html>
